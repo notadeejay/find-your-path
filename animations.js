@@ -1,5 +1,6 @@
 
 function animateAll() {
+
     anime({
         loop: false,
         targets: '.this .question__text .letter', 
@@ -8,7 +9,7 @@ function animateAll() {
         opacity: [0,1],
         easing: "easeOutExpo",
         duration: 1200,
-        delay: (el, i) => 500 + 30 * i
+        delay: (el, i) => 700 + 30 * i
       })
     anime({
         loop: false,
@@ -18,11 +19,12 @@ function animateAll() {
         opacity: [0,1],
         easing: "easeOutExpo",
         duration: 1200,
-        delay: (el, i) => 500 + 30 * i
+        delay: (el, i) => 700 + 30 * i
       })
 }
 
 function replaceHTML() {
+
  $('.question__text tw-link').html(function (i, html) {
      var chars = $.trim(html).split(" ");
      return '<span class="letter">' + chars.join('</span> <span class="letter">') + '</span>';
