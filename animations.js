@@ -34,6 +34,7 @@ function replaceHTML() {
 
 function startAnimations() {
    var callFunc = setTimeout(function() {replaceHTML()}, 500)
+   addAnimationClass();
 }
 
 function popUpLetters() {
@@ -56,6 +57,6 @@ setTimeout(function() {
         var chars = $.trim(html).split("");
         return '<span class="letter">' + chars.join('</span><span class="letter">') + '</span>';
     });}, 500)
-    
+ 
     setTimeout(function() {popUpLetters();}, 500)
 }
