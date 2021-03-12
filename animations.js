@@ -34,7 +34,7 @@ function replaceHTML() {
 
 function startAnimations() {
    var callFunc = setTimeout(function() {replaceHTML()}, 500)
-   addAnimationClass();
+  
 }
 
 function popUpLetters() {
