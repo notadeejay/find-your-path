@@ -69,7 +69,7 @@ background-color: #FFD1B5;
 
 .results .footer {
   justify-content: flex-end;
-  padding: 20px 113px;
+  padding: 20px 30px;
 }
 
 .header {
@@ -939,6 +939,7 @@ $(&quot;.interests-text&quot;).text(resultsObj[formattedName][&#39;interests&#39
 
 var ctx = document.getElementById(&#39;myChart&#39;).getContext(&#39;2d&#39;);
 Chart.defaults.global.defaultFontFamily= &#39;Lato, sans-serif&#39;
+Chart.defaults.global.defaultFontColor = '#001B58';
 var chart = new Chart(ctx, {
     // The type of chart we want to create
     type: &#39;horizontalBar&#39;,
