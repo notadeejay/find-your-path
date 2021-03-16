@@ -17,7 +17,7 @@
 
 <tw-storydata name="Pathstream Career Diagnostics" startnode="26" creator="Twine" creator-version="2.3.9" ifid="471FC68C-194C-4CE6-9872-7AB9E265D86E" zoom="1" format="Harlowe" format-version="3.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap');
 
-html, body { height: 100% }
+html, body { height: 100%;}
 
 tw-story {
 width: 100%;
@@ -67,13 +67,18 @@ background-color: #FFD1B5;
   padding: 20px 58px;
 }
 
+.results .footer {
+  justify-content: flex-end;
+  padding: 20px 113px;
+}
+
 .header {
 display: flex;
 align-items: center;
 z-index: 9999;
 }
 
-.header__title, .try-again span {
+.header__title, .try-again span, .try-again tw-link {
 font-family: Lato;
 font-style: normal;
 font-weight: bold;
@@ -84,6 +89,9 @@ text-transform: uppercase;
 color: #001B58;
 }
 
+.visited:hover {
+    color: #FFA500;
+}
 
 .header__title img {
 margin-bottom: 12px;
@@ -290,13 +298,12 @@ font-family: Open Sans;
 }
 
 .chart-container {
-width: 50%;
-margin-top: 100px;
+width: 60%;
+
 }
 
 .results-container {
 display: flex;
-padding: 25px 0px;
 height: 100%;
 justify-content: space-between;
 align-content: center;
@@ -312,14 +319,18 @@ overflow-y: scroll;
 display: none; /* Safari and Chrome */
 }
 
-.results-description h2, ul, .skill h2 {
+ul span {
 padding: 0;
 font-family: Open Sans;
 font-style: normal;
 font-weight: 800;
 letter-spacing: 1px;
 text-transform: uppercase;
-color: #1E557A;
+color: #FFF;
+}
+
+ul p {
+  line-height: 24px;
 }
 
 .skill h2 {
@@ -393,8 +404,9 @@ table tw-link {
 .results-description h2 {
 font-size: 30px;
 line-height: 36px;
-border-bottom: 1px solid #154268;
-padding: 55px 0px 20px;
+color: #FFFFFF;
+background: #001B58;
+padding: 30px 20px;
 margin: 0;
 }
 
@@ -408,18 +420,49 @@ margin-bottom: 2rem;
 }
 
 li {
-border-bottom: 1px solid #154268;
 padding: 55px 20px 20px 20px;
 }
 
+li:nth-child(1) {
+  background: #C9EDFB
+}
+
+li:nth-child(1) span {
+ background: #039BE8
+}
+
+
+li:nth-child(2) {
+  background: #FFF4CC;
+}
+
+li:nth-child(2) span {
+  background: #FFA500;
+}
+
+li:nth-child(3) {
+  background: #FFD1B5;
+}
+
+li:nth-child(3) span {
+  background: #FF6347;
+}
 li span {
 display: inline-block;
-background: #1E557A;
 padding: 10px 20px;
 position: absolute;
 top: 0;
 left: 0;
 color: #F5FBFE;
+}
+
+.header__lead {
+  color: #001B58;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 44px;
+    line-height: 98px;
 }
 
 .long-description {
@@ -444,6 +487,7 @@ line-height: 28px;
 
 .results .header {
 justify-content: space-between;
+padding: 20px 0px;
 }
 
 
@@ -841,8 +885,8 @@ startAnimations()
 
 &lt;/script&gt;</tw-passagedata><tw-passagedata pid="6" name="iq1" tags="" position="102,522" size="100,100">&lt;div class=&quot;main-background interests&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-interests.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one rotate&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two rotate&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three rotate&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;Your game of choice is a&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;Video game&lt;/div&gt;&lt;div class=&quot;question__image slide-in-left&quot;&gt;&lt;img src=&quot;images/iq1-a.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $FB to it +2)(set: $TB to it +1.5)(set: $UN to it +3)(set: $PM to it +1)(set: $interests to it + (a:&quot;Video game&quot;))(goto: &quot;iq2&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link: &#39;&lt;div class=&quot;question__text&quot;&gt;Board game&lt;/div&gt;&lt;div class=&quot;question__image slide-in-right&quot;&gt;&lt;img src=&quot;images/iq1-b.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $FB to it +1)(set: $TB to it +1.5)(set: $SF to it +3)(set: $PM to it +2)(set: $interests to it + (a:&quot;Board games&quot;))(goto: &quot;iq2&quot;)]&lt;/div&gt;&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;QUIZ: FIND YOUR PATH QUIZ&lt;/span&gt;&lt;img src=&quot;images/ps-logo.png&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;script&gt;
   startAnimations()
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="7" name="results" tags="" position="913,642" size="100,100">&lt;div class=&quot;main-background results&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__logo&quot;&gt;&lt;img src=&quot;images/ps-logo.png&quot;&gt;&lt;/img&gt;&lt;span class=&quot;header__title&quot;&gt;FIND YOUR&lt;/span&gt;&lt;span class=&quot;header__title&quot;&gt;PATH QUIZ&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;try-again&quot;&gt;&lt;span&gt;[[Take the Quiz Again|pq]]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;results-container&quot;&gt;
-&lt;div class=&quot;results-description&quot; style=&quot;color: black&quot;&gt;&lt;h2&gt;&lt;/h2&gt;&lt;ul class=&quot;results-list&quot;&gt;&lt;li&gt;&lt;span&gt;Traits&lt;/span&gt;&lt;p class=&quot;personality-text&quot;&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Interests&lt;/span&gt;&lt;p class=&quot;interests-text&quot;&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p class=&quot;long-description&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut ipsum est. Nulla consectetur nibh faucibus, volutpat enim sit amet, hendrerit ante. Fusce non risus nec augue volutpat pulvinar quis ut massa. Fusce eu cursus neque. Curabitur id lacinia massa, vel tincidunt lectus. Quisque metus leo, dapibus vel vulputate quis, tristique id nisl. Donec posuere, nunc vel convallis pharetra, dolor sem facilisis quam, a finibus purus elit eu lacus. Donec vel ligula iaculis, placerat ligula in, viverra eros. Quisque interdum lacus vel maximus eleifend.&lt;/p&gt;&lt;p class=&quot;long-description&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut ipsum est. Nulla consectetur nibh faucibus, volutpat enim sit amet, hendrerit ante. Fusce non risus nec augue volutpat pulvinar quis ut massa. Fusce eu cursus neque. Curabitur id lacinia massa, vel tincidunt lectus. Quisque metus leo, dapibus vel vulputate quis, tristique id nisl. Donec posuere, nunc vel convallis pharetra, dolor sem facilisis quam, a finibus purus elit eu lacus. Donec vel ligula iaculis, placerat ligula in, viverra eros. Quisque interdum lacus vel maximus eleifend.&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;chart-container&quot;&gt;&lt;canvas id=&quot;myChart&quot;&gt;&lt;/canvas&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="7" name="results" tags="" position="913,642" size="100,100">&lt;div class=&quot;main-background results&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div&gt;&lt;span class=&quot;header__lead&quot;&gt;Your recommended path:&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;try-again&quot;&gt;&lt;span&gt;[[Take the Quiz Again|pq]]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;results-container&quot;&gt;
+&lt;div class=&quot;results-description&quot; style=&quot;color: black&quot;&gt;&lt;h2&gt;&lt;/h2&gt;&lt;ul class=&quot;results-list&quot;&gt;&lt;li&gt;&lt;span&gt;Traits&lt;/span&gt;&lt;p class=&quot;personality-text&quot;&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Interests&lt;/span&gt;&lt;p class=&quot;interests-text&quot;&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Skills&lt;/span&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut ipsum est. Nulla consectetur nibh faucibus, volutpat enim sit amet, hendrerit ante. Fusce non risus nec augue volutpat pulvinar quis ut massa. Fusce eu cursus neque. Curabitur id lacinia massa, vel tincidunt lectus. Quisque metus leo, dapibus vel vulputate quis, tristique id nisl. Donec posuere, nunc vel convallis pharetra, dolor sem facilisis quam, a finibus purus elit eu lacus. Donec vel ligula iaculis, placerat ligula in, viverra eros. Quisque interdum lacus vel maximus eleifend.&lt;/p&gt;&lt;p &gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut ipsum est. Nulla consectetur nibh faucibus, volutpat enim sit amet, hendrerit ante. Fusce non risus nec augue volutpat pulvinar quis ut massa. Fusce eu cursus neque. Curabitur id lacinia massa, vel tincidunt lectus. Quisque metus leo, dapibus vel vulputate quis, tristique id nisl. Donec posuere, nunc vel convallis pharetra, dolor sem facilisis quam, a finibus purus elit eu lacus. Donec vel ligula iaculis, placerat ligula in, viverra eros. Quisque interdum lacus vel maximus eleifend.&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div class=&quot;chart-container&quot;&gt;&lt;canvas id=&quot;myChart&quot;&gt;&lt;/canvas&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;QUIZ: FIND YOUR PATH QUIZ&lt;/span&gt;&lt;img src=&quot;images/ps-logo.png&quot;&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;script&gt;
 var resultsObj = {
     DIGITAL_MARKETING: {
@@ -904,7 +948,7 @@ var chart = new Chart(ctx, {
         labels: newArrayLabel,
         datasets: [{
             data: newArrayData,
-            backgroundColor: [&#39;#1E557A&#39;, &#39;#D6E6F1&#39;, &#39;#D6E6F1&#39;, &#39;#D6E6F1&#39;, &#39;#D6E6F1&#39;]
+            backgroundColor: [&#39;#001B58&#39;, &#39;#d3d3d3&#39;, &#39;#d3d3d3&#39;, &#39;#d3d3d3&#39;, &#39;#d3d3d3&#39;]
         }],
     },
 
@@ -1044,7 +1088,7 @@ data: sendData
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;QUIZ: FIND YOUR PATH QUIZ&lt;/span&gt;&lt;img src=&quot;images/ps-logo.png&quot;&gt;&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="22" name="sq7" tags="" position="800,644" size="100,100">&lt;div class=&quot;main-background skills&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-skills.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one rotate&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two rotate&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three rotate&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;div class=&quot;skill&quot;&gt;&lt;span class=&quot;skill__type&quot;&gt;Career&lt;/span&gt;&lt;span class=&quot;skill__description&quot;&gt;WWhat do you value most in a career?&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;QUIZ: FIND YOUR PATH QUIZ&lt;/span&gt;&lt;img src=&quot;images/ps-logo.png&quot;&gt;&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="22" name="sq7" tags="" position="799,643" size="100,100">&lt;div class=&quot;main-background skills&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-skills.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one rotate&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two rotate&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three rotate&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;div class=&quot;skill&quot;&gt;&lt;span class=&quot;skill__type&quot;&gt;Career&lt;/span&gt;&lt;span class=&quot;skill__description&quot;&gt;WWhat do you value most in a career?&lt;/span&gt;
 &lt;table&gt;
 &lt;tbody&gt;
   &lt;tr&gt;
