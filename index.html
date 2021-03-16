@@ -299,7 +299,28 @@ font-family: Open Sans;
 
 .chart-container {
 width: 60%;
+margin-left: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
 
+
+.cta {
+  margin-top: 60px;
+}
+.cta a{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #001B58;
+  font-weight: 800;
+}
+
+.cta svg {
+  height: 30px;
+  margin-left: -20px;
+  stroke-width: 4;
 }
 
 .results-container {
@@ -886,7 +907,7 @@ startAnimations()
 &lt;/script&gt;</tw-passagedata><tw-passagedata pid="6" name="iq1" tags="" position="102,522" size="100,100">&lt;div class=&quot;main-background interests&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-interests.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one rotate&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two rotate&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three rotate&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;Your game of choice is a&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;Video game&lt;/div&gt;&lt;div class=&quot;question__image slide-in-left&quot;&gt;&lt;img src=&quot;images/iq1-a.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $FB to it +2)(set: $TB to it +1.5)(set: $UN to it +3)(set: $PM to it +1)(set: $interests to it + (a:&quot;Video game&quot;))(goto: &quot;iq2&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link: &#39;&lt;div class=&quot;question__text&quot;&gt;Board game&lt;/div&gt;&lt;div class=&quot;question__image slide-in-right&quot;&gt;&lt;img src=&quot;images/iq1-b.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $FB to it +1)(set: $TB to it +1.5)(set: $SF to it +3)(set: $PM to it +2)(set: $interests to it + (a:&quot;Board games&quot;))(goto: &quot;iq2&quot;)]&lt;/div&gt;&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;QUIZ: FIND YOUR PATH QUIZ&lt;/span&gt;&lt;img src=&quot;images/ps-logo.png&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;script&gt;
   startAnimations()
 &lt;/script&gt;</tw-passagedata><tw-passagedata pid="7" name="results" tags="" position="913,642" size="100,100">&lt;div class=&quot;main-background results&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div&gt;&lt;span class=&quot;header__lead&quot;&gt;Your recommended path:&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;try-again&quot;&gt;&lt;span&gt;[[Take the Quiz Again|pq]]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;results-container&quot;&gt;
-&lt;div class=&quot;results-description&quot; style=&quot;color: black&quot;&gt;&lt;h2&gt;&lt;/h2&gt;&lt;ul class=&quot;results-list&quot;&gt;&lt;li&gt;&lt;span&gt;Traits&lt;/span&gt;&lt;p class=&quot;personality-text&quot;&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Interests&lt;/span&gt;&lt;p class=&quot;interests-text&quot;&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Skills&lt;/span&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut ipsum est. Nulla consectetur nibh faucibus, volutpat enim sit amet, hendrerit ante. Fusce non risus nec augue volutpat pulvinar quis ut massa. Fusce eu cursus neque. Curabitur id lacinia massa, vel tincidunt lectus. Quisque metus leo, dapibus vel vulputate quis, tristique id nisl. Donec posuere, nunc vel convallis pharetra, dolor sem facilisis quam, a finibus purus elit eu lacus. Donec vel ligula iaculis, placerat ligula in, viverra eros. Quisque interdum lacus vel maximus eleifend.&lt;/p&gt;&lt;p &gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut ipsum est. Nulla consectetur nibh faucibus, volutpat enim sit amet, hendrerit ante. Fusce non risus nec augue volutpat pulvinar quis ut massa. Fusce eu cursus neque. Curabitur id lacinia massa, vel tincidunt lectus. Quisque metus leo, dapibus vel vulputate quis, tristique id nisl. Donec posuere, nunc vel convallis pharetra, dolor sem facilisis quam, a finibus purus elit eu lacus. Donec vel ligula iaculis, placerat ligula in, viverra eros. Quisque interdum lacus vel maximus eleifend.&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div class=&quot;chart-container&quot;&gt;&lt;canvas id=&quot;myChart&quot;&gt;&lt;/canvas&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;QUIZ: FIND YOUR PATH QUIZ&lt;/span&gt;&lt;img src=&quot;images/ps-logo.png&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;results-description&quot; style=&quot;color: black&quot;&gt;&lt;h2&gt;&lt;/h2&gt;&lt;ul class=&quot;results-list&quot;&gt;&lt;li&gt;&lt;span&gt;Traits&lt;/span&gt;&lt;p class=&quot;personality-text&quot;&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Interests&lt;/span&gt;&lt;p class=&quot;interests-text&quot;&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Skills&lt;/span&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut ipsum est. Nulla consectetur nibh faucibus, volutpat enim sit amet, hendrerit ante. Fusce non risus nec augue volutpat pulvinar quis ut massa. Fusce eu cursus neque. Curabitur id lacinia massa, vel tincidunt lectus. Quisque metus leo, dapibus vel vulputate quis, tristique id nisl. Donec posuere, nunc vel convallis pharetra, dolor sem facilisis quam, a finibus purus elit eu lacus. Donec vel ligula iaculis, placerat ligula in, viverra eros. Quisque interdum lacus vel maximus eleifend.&lt;/p&gt;&lt;p &gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut ipsum est. Nulla consectetur nibh faucibus, volutpat enim sit amet, hendrerit ante. Fusce non risus nec augue volutpat pulvinar quis ut massa. Fusce eu cursus neque. Curabitur id lacinia massa, vel tincidunt lectus. Quisque metus leo, dapibus vel vulputate quis, tristique id nisl. Donec posuere, nunc vel convallis pharetra, dolor sem facilisis quam, a finibus purus elit eu lacus. Donec vel ligula iaculis, placerat ligula in, viverra eros. Quisque interdum lacus vel maximus eleifend.&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div class=&quot;chart-container&quot;&gt;&lt;canvas id=&quot;myChart&quot;&gt;&lt;/canvas&gt;&lt;div class=&quot;cta&quot;&gt;&lt;a&gt; <svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 100"><g transform="translate(50 50) scale(0.69 -0.69) rotate(-90) translate(-50 -50)" style="fill:#001b58"><svg fill="#001b58"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 10 10" enable-background="new 0 0 10 10" xml:space="preserve"><g><path stroke-width="2" stroke="#001b58" d="M1.089,3.191c0-0.162,0.131-0.295,0.293-0.295c0.078,0,0.152,0.031,0.207,0.086l3.412,3.412l3.412-3.412   C8.53,2.871,8.716,2.873,8.827,2.99c0.111,0.113,0.111,0.295,0,0.408L5.208,7.018c-0.113,0.115-0.299,0.115-0.414,0L1.175,3.398   C1.12,3.344,1.089,3.27,1.089,3.191z"></path></g></svg></g></svg>&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;QUIZ: FIND YOUR PATH QUIZ&lt;/span&gt;&lt;img src=&quot;images/ps-logo.png&quot;&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;script&gt;
 var resultsObj = {
     DIGITAL_MARKETING: {
@@ -936,10 +957,16 @@ $(&#39;.results-description h2&#39;).text(newArrayLabel[0])
 var formattedName = newArrayLabel[0].replace(&#39; &#39;, &#39;_&#39;)
 $(&quot;.personality-text&quot;).text(resultsObj[formattedName][&#39;personality&#39;])
 $(&quot;.interests-text&quot;).text(resultsObj[formattedName][&#39;interests&#39;])
+var linkText = "Learn more about " + newArrayLabel[0].toLowerCase()
+var linkA = $('.cta a')
+$(linkA).prepend(linkText)
+
+
 
 var ctx = document.getElementById(&#39;myChart&#39;).getContext(&#39;2d&#39;);
 Chart.defaults.global.defaultFontFamily= &#39;Lato, sans-serif&#39;
-Chart.defaults.global.defaultFontColor = '#001B58';
+Chart.defaults.global.defaultFontColor = &#39;#001B58&#39;;
+Chart.defaults.global.defaultFontStyle = &#39;Bold&#39;
 var chart = new Chart(ctx, {
     // The type of chart we want to create
     type: &#39;horizontalBar&#39;,
@@ -949,7 +976,7 @@ var chart = new Chart(ctx, {
         labels: newArrayLabel,
         datasets: [{
             data: newArrayData,
-            backgroundColor: [&#39;#001B58&#39;, &#39;#d3d3d3&#39;, &#39;#d3d3d3&#39;, &#39;#d3d3d3&#39;, &#39;#d3d3d3&#39;]
+            backgroundColor: [&#39;#001B58&#39;, &#39;#95D6F8&#39;, &#39;#95D6F8&#39;, &#39;#95D6F8&#39;, &#39;#95D6F8&#39;]
         }],
     },
 
@@ -958,16 +985,23 @@ var chart = new Chart(ctx, {
         scales: {
             xAxes: [{
                 ticks: {
-                    beginAtZero: true
+                  beginAtZero: true,
+                  display: false
+                  
                 },
 				gridLines: {
-                display:false
+                display:false,
+                drawBorder:false
             }
 				
             }],
 			yAxes: [{
 			gridLines: {
-                display:false
+                display:false,
+                drawBorder:false
+            },
+            ticks: {
+
             }
 			}]
         },
