@@ -662,6 +662,21 @@ padding: 20px 0px;
   line-height: 1em;
 }
 
+
+@media screen and (max-width: 1024px) {
+  .question {
+    width: 400px;
+    height: 430px;
+    margin-top: 50px;
+  }
+  .footer {
+    padding: 20px 110px;
+  }
+
+  .question tw-link {
+    padding: 30px;
+  }
+}
 @media screen and (max-width: 768px) {
   
  .questions {
@@ -706,16 +721,64 @@ height: 100px;
 text-align: center;
 }
 
+tw-story{
+  background: #F5FBFE;
+  overflow-y: scroll;
+}
+
+
+.cta {
+    margin: 30px auto;
+}
+
+
+.results .header {
+    align-items: center;
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+}
+
+.header__lead {
+  font-size: 30px;
+  line-height: 45px;
+}
+.try-again span tw-link {
+    font-size: 14px;
+}
+
+.results-container {
+    flex-direction: column;
+}
+
+.results-description, .chart-container {
+  width: 100%;
+}
+
+.results-description {
+    overflow-y: initial;
+}
+
+.results .footer {
+  display: none;
+}
+
+.results-description h2 {
+  padding: 10px 20px;
+}
+.chart-container {
+    margin: 10px 0px;
+}
+
+.intro .quiz-section {
+  opacity: 0;
+}
+
 
 }
 
 
 @media screen and (max-width: 480px) {
-  tw-story{
-  background: #F5FBFE;
-  overflow-y: scroll;
-}
-
 
 .question {
 width: 200px;
@@ -744,6 +807,7 @@ td tw-link {
 font-size: 16px;
 line-height: 22px;
 }
+
 .skill__type {
   font-size: 30px;
   line-height: 45px;
@@ -773,9 +837,7 @@ width: 150px;
 margin: 20px auto;
 }
 
-.main-background {
-padding: 24px 12px;
-}
+
 .header {
 align-items: flex-start;
 justify-content: center;
@@ -822,52 +884,6 @@ font-size: 8px;
 line-height: 12px
 }
 
-.cta {
-    margin: 30px auto;
-}
-
-
-.results .header {
-    align-items: center;
-    flex-direction: column-reverse;
-    justify-content: center;
-    text-align: center;
-}
-
-.header__lead {
-  font-size: 30px;
-  line-height: 45px;
-}
-.try-again span tw-link {
-    font-size: 14px;
-}
-
-.results-container {
-    flex-direction: column;
-}
-
-.results-description, .chart-container {
-  width: 100%;
-}
-
-.results-description {
-    overflow-y: initial;
-}
-
-.results .footer {
-  display: none;
-}
-
-.results-description h2 {
-  padding: 10px 20px;
-}
-.chart-container {
-    margin: 10px 0px;
-}
-}
-.intro .quiz-section {
-  opacity: 0;
-}
 
 .quiz-section .letter {
   display: inline-block;
