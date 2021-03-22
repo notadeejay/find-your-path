@@ -48,11 +48,11 @@ function animateTable() {
 
 function startAnimations(id) {
   if (id === 1) {
-     animationFunc = replaceHTML
+    var callFunc = setTimeout(function() {replaceHTML()}, 500)
   } else if (id === 2) {
-    animationFunc = animateTable
+    callFunc = setTimeout(function() {animateTable()}, 500)
  }
-   var callFunc = setTimeout(function() {animationFunc()}, 500)
+
   //  var callTableFunc = setTimeout(function() {animateTable(), 500})
 }
 
