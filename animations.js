@@ -32,31 +32,27 @@ function replaceHTML() {
     animateAll()
 }
 
-function startAnimations() {
-   var callFunc = setTimeout(function() {replaceHTML()}, 500)
-  
+function animateTable() {
+  anime({
+    loop: false,
+    targets: 'table td',
+    translateX: [40,0],
+    translateZ: 0,
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 1200,
+    delay: (el, i) => 500 + 30 * i
+  })
+  setTimeout(function() {$('td').css('opacity', 1);}, 700)
 }
 
-function popUpLetters() {
-    console.log('here')
-    anime({
-        loop: false,
-        targets: '.quiz-section .letter',   
-        scale: [0, 1],
-        duration: 1500,
-        elasticity: 600,
-        delay: (el, i) => 100 * (i+1)
-      })
-
-    setTimeout(function() {$('.quiz-section').css('opacity', 1) ;}, 700)
+function startAnimations(id) {
+  if (id === 1) {
+     animationFunc = replaceHTML
+  } else if (id === 2) {
+    animationFunc = animateTable
+ }
+   var callFunc = setTimeout(function() {animationFunc()}, 500)
+  //  var callTableFunc = setTimeout(function() {animateTable(), 500})
 }
 
-function animateSection() {
-setTimeout(function() {
-    $('.quiz-section').html(function (i, html) {
-        var chars = $.trim(html).split("");
-        return '<span class="letter">' + chars.join('</span><span class="letter">') + '</span>';
-    });}, 500)
- 
-    setTimeout(function() {popUpLetters();}, 500)
-}
