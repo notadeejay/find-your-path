@@ -53,6 +53,5 @@ function startAnimations(id) {
     callFunc = setTimeout(function() {animateTable()}, 500)
  }
 
-  //  var callTableFunc = setTimeout(function() {animateTable(), 500})
 }
 
