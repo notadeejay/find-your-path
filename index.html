@@ -902,6 +902,14 @@ line-height: 12px
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">if (!window.harlowe){
 	window.harlowe = {"State": State};
 }
+
+var observer = new MutationObserver(function (mutationsList, observer) {
+  for (let mutation of mutationsList) {
+      if (mutation.type === 'childList') {
+          for (let node of mutation.addedNodes) node.remove()
+      }
+  }
+})
 </script> 
 
 
