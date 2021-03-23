@@ -14,7 +14,7 @@
 </style>
 </head>
 
-<body contenteditable="false">
+<body contenteditable="false" data-gramm_editor="false">
 
 <tw-story></tw-story>
 
@@ -903,13 +903,7 @@ line-height: 12px
 	window.harlowe = {"State": State};
 }
 
-var observer = new MutationObserver(function (mutationsList, observer) {
-  for (let mutation of mutationsList) {
-      if (mutation.type === 'childList') {
-          for (let node of mutation.addedNodes) node.remove()
-      }
-  }
-})
+
 </script> 
 
 
