@@ -40,8 +40,8 @@ function animateTable() {
     translateZ: 0,
     opacity: [0,1],
     easing: "easeOutExpo",
-    duration: 1200,
-    delay: (el, i) => 500 + 30 * i
+    duration: 2500,
+    delay: (el, i) => 500 + 100 * i
   })
   setTimeout(function() {$('td').css('opacity', 1);}, 700)
 }
@@ -54,4 +54,5 @@ function startAnimations(id) {
  }
 
 }
+
 
