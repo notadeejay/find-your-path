@@ -30,7 +30,6 @@
 <link rel="icon" 
       type="image/png" 
       href="images/ps-logo.png">
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 <script src="animations.js"></script>
@@ -469,12 +468,15 @@ text-align: center;;
 
 td {
 padding: 80px 20px 50px;
+border-radius: 5px;
 display:table-cell;
 width: 320px;
 height: 320px;
 vertical-align: top;
 transition: box-shadow .3s;
+background-color: #E65940;
 opacity: 0;
+margin: 10px;
 }
 
 td:hover {
@@ -496,21 +498,6 @@ td tw-link:hover {
   opacity: .7;
 }
 
-td:nth-child(1) {
-  background: #993B2B;
-}
-
-td:nth-child(2) {
-  background: #B34532;
-}
-
-td:nth-child(3) {
-  background: #CC4F39;
-}
-
-td:nth-child(4) {
-  background:#E65940;
-}
 
 table {
 font-family: Open Sans;
@@ -521,7 +508,7 @@ display:table;
 width:60%;
 table-layout:fixed;
 margin: 0 auto;
-border-collapse: collapse;
+border-spacing: 10px;
 }
 
 table tw-link {
