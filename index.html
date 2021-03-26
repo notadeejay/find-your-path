@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163266382-1"></script>
 
 <script>
@@ -11,6 +11,8 @@
   gtag('config', 'UA-163266382-1')
   gtag('event', 'page_view', { send_to: 'UA-163266382-1' });
 </script>
+
+<meta charset="utf-8">
 <title>Pathstream Career Diagnostics</title>
 <link rel="icon" 
       type="image/png" 
@@ -52,20 +54,16 @@ padding: 24px 40px;
 background-color: #C9EDFB;
 }
 
-.personality .that {
-background: #003685;
+.personality .question{
+background: #039BE8;
 }
 
 .interests {
 background-color: #FFF4CC;
 }
 
-.interests .that {
+.interests .question {
 background-color: #FFC23F;
-}
-
-.interests .this {
-  background-color: #FFA500;
 }
 
 .interests .question tw-link .question__text{
@@ -77,12 +75,19 @@ background-color: #FFD1B5;
 }
 
 .skills .footer {
-  padding: 20px 58px;
+  padding: 20px 90px 40px;
 }
 
 .results .footer {
-  justify-content: flex-end;
-  padding: 20px 30px;
+  padding: 20px 108px 30px;
+}
+
+.header__left {
+  display: flex;
+}
+
+.result-icon {
+  margin-right: 20px;
 }
 
 .header {
@@ -129,14 +134,14 @@ margin-bottom: 1em
 }
 
 .header__progress img {
-width: 500px;
+width: 300px;
 }
 
 .progress__label {
 font-family: Lato;
 font-style: normal;
 font-weight: 800;
-font-size: 16px;
+font-size: 14px;
 line-height: 24px;
 letter-spacing: 0.09em;
 text-transform: uppercase;
@@ -145,11 +150,11 @@ position: absolute;
 }
 
 .one {
-  left: -67px;
+  left: -51px;
 }
 
 .two {
-  left: 187px;
+  left: 102px;
 }
 
 .three {
@@ -180,12 +185,10 @@ color: rgba(255, 99, 71, 0.1);
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    padding: 70px 30px;
+    padding: 50px 30px;
 }
 
-.personality .this{
-    background: #001B58;
-}
+
 
 .question__text{
 font-family: Open Sans;
@@ -215,9 +218,10 @@ width: 300px;
 
 
 .question {
-width: 500px;
-height: 500px;
-margin-top: 10px;
+width: 450px;
+height: 450px;
+margin: 40px 50px 0px;
+border-radius: 5px;
 }
 
 
@@ -225,7 +229,7 @@ margin-top: 10px;
 display: flex;
 justify-content: center;
 align-items: center;
-padding: 80px 50px;
+padding: 80px 50px 20px;
 margin-top: 30px
 }
 
@@ -294,12 +298,24 @@ bottom: 0px;
 display: flex;
 justify-content: space-between;
 align-items: center;
-padding: 20px 200px;
+padding: 16px 220px 40px;
 }
 
 .footer img {
-  width: 53px;
-  height: 56px;
+  width: 34px;
+  height: 34px;
+}
+
+
+
+.presented-by {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: black;
+    font-family: lato;
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
 }
 
 .quiz-section {
@@ -312,25 +328,37 @@ background-color: #F5FBFE;
 font-family: Open Sans;
 }
 
-.chart-container {
-width: 60%;
-margin-left: 20px;
-display: flex;
-flex-direction: column;
-align-items: center;
+.results__options {
+  margin: 40px 0;
+}
+
+.results__options p {
+  color: #001B58;
+}
+
+.results__options a {
+  color: #FB6347;
+  font-weight: 700;
+  border-bottom: 2px solid #FB6347;
 }
 
 
-.cta {
-  margin-top: 60px;
-}
+
 .cta a{
   display: flex;
+  font-size: 22px;
   align-items: center;
   padding: 5px;
   cursor: pointer;
-  color: #001B58;
-  font-weight: 800;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+   box-sizing: border-box;
+   background: #039BE8;
+    border-radius: 5px;
+    padding: 2px 20px;
+    width: fit-content;
+
 }
 
 .cta svg {
@@ -339,34 +367,38 @@ align-items: center;
   stroke-width: 4;
 }
 
-a { 
-  text-decoration: none;
-  box-sizing: border-box;
-  box-shadow: inset 0 -10px 0 #001B58;
-  transition: 0.3s;
-}
 
-a:hover {
-  box-shadow: inset 0 -100px 0 #001B58;
-  color: #FFF;
-  transition: 0.3s;
-}
 
-a:hover  path {
+
+
+.cta a path {
   stroke: #FFF;
 }
 
 .results-container {
 display: flex;
 height: 100%;
+padding: 30px 0px;
 justify-content: space-between;
 align-content: center;
 }
 
 .results-description {
-width: 40%;
+width: 500px;
+height: 500px;
+background-color: #D6E6F1;
+padding: 20px 40px;
 overflow-y: scroll;
 -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.results-description p {
+font-family: Open Sans;
+font-size: 18px;
+font-weight: 400;
+color: #000;
+line-height: 30px;
+text-align: left;
 }
 
 .results-description::-webkit-scrollbar {
@@ -456,59 +488,11 @@ table tw-link {
   font-size: 30px;
  line-height: 41px;
 }
-.results-description h2 {
-font-size: 30px;
-line-height: 36px;
-color: #FFFFFF;
-background: #001B58;
-padding: 30px 20px;
-margin: 0;
-}
 
-ul {
-list-style-type: none;
-padding: 0;
-font-size: 16px;
-line-height: 19px;
-margin: 0;
-margin-bottom: 2rem;
-}
-
-li {
-padding: 55px 20px 20px 20px;
-}
-
-li:nth-child(1) {
-  background: #C9EDFB
-}
-
-li:nth-child(1) span {
- background: #039BE8
-}
-
-
-li:nth-child(2) {
-  background: #FFF4CC;
-}
-
-li:nth-child(2) span {
-  background: #FFA500;
-}
-
-li:nth-child(3) {
-  background: #FFD1B5;
-}
-
-li:nth-child(3) span {
-  background: #FF6347;
-}
-li span {
-display: inline-block;
-padding: 10px 20px;
-position: absolute;
-top: 0;
-left: 0;
-color: #F5FBFE;
+.results-description li {
+  font-size: 18px;
+  line-height: 30px;
+  color: #000;
 }
 
 .header__lead {
@@ -517,7 +501,13 @@ color: #F5FBFE;
     font-style: normal;
     font-weight: 800;
     font-size: 44px;
-    line-height: 98px;
+    line-height: 52px;
+    display: inline-block;
+    width: 700px
+}
+
+.header__lead span {
+  border-bottom: 6px dotted #D6E6F1;
 }
 
 .long-description {
@@ -526,25 +516,57 @@ line-height: 28px;
 padding: 0 20px;
 }
 
-.personality-text, .interests-text {
-text-transform: initial;
-font-weight: normal;
-color: #000;
-letter-spacing: normal;
-padding: 0;
-font-size: 16px;
-line-height: 28px;
-
+.additional-details {
+display: flex;
+flex-direction: column;
+width: 50%;
 }
 
+.results-description__short {
+  display: flex;
+  justify-content: space-between;
+}
 
+.results-interests, .results-traits {
+    width: 250px;
+    height: 250px;
+    color: black;
+    font-family: Open Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    border-radius: 50%;
+    padding-left: 2em;
+    padding-top: 1em;
+}
+
+.results-interests span, .results-traits span {
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 24px;
+}
+
+.results-interests {
+  background-color: #C9EDFB;
+}
+
+.results-traits {
+  background-color: #FEF4CB;
+}
 
 
 .results .header {
 justify-content: space-between;
-padding: 20px 0px;
+padding: 0px;
+align-items: flex-start;
 }
 
+.results.main-background {
+  padding: 50px 108px;
+}
 
 .slide-in-bottom {
   -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.7s both;
@@ -742,15 +764,16 @@ tw-story{
 
 
 .cta {
-    margin: 30px auto;
+  margin: 20px auto 80px;
 }
 
 
 .results .header {
     align-items: center;
     flex-direction: column-reverse;
-    justify-content: center;
+    justify-content: space-evenly;
     text-align: center;
+    height: 300px;
 }
 
 .header__lead {
@@ -765,27 +788,41 @@ tw-story{
     flex-direction: column;
 }
 
-.results-description, .chart-container {
+.additional-details {
   width: 100%;
-}
-
-.results-description {
-    overflow-y: initial;
+  margin-top: 40px;
 }
 
 .results .footer {
   display: none;
 }
 
-.results-description h2 {
-  padding: 10px 20px;
+.results-description {
+  width: 100%;
+  overflow-y: initial;
 }
-.chart-container {
-    margin: 10px 0px;
+
+.results-description__short {
+  justify-content: space-evenly;
 }
+
+.results__options {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.results.main-background {
+  padding: 50px;
+}
+
 
 .intro .quiz-section {
   opacity: 0;
+}
+
+.header__left {
+  display: block;
+
 }
 
 }
@@ -901,6 +938,41 @@ font-size: 8px;
 line-height: 12px
 }
 
+.results.main-background {
+  padding: 10px;
+}
+.result-icon {
+  width: 80px;
+}
+
+.header__lead {
+  max-width: 320px;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.results-container {
+  padding: 0;
+}
+
+.results-description {
+  height: fit-content;
+  padding: 20px;
+}
+
+.results-interests, .results-traits {
+  margin: 5px;
+}
+.results-description__short {
+    align-items: center;
+    flex-direction: column
+}
+
+.cta a {
+  line-height: 22px;
+  font-size: 16px;
+}
+
 }
 .quiz-section .letter {
   display: inline-block;
@@ -916,68 +988,88 @@ line-height: 12px
 </script> 
 
 
-<tw-passagedata pid="1" name="pq1" tags="" position="107,397" size="100,100">(set: $FB to 0)(set: $TB to 0)(set: $UN to 0)(set: $SF to 0)(set: $PM to 0)(set:$personality to (a: ))&lt;div class=&quot;main-background personality&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-personality.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one &quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;You are a person who&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link: &#39;&lt;div class=&quot;question__text&quot;&gt;Colors outside of the lines&lt;/div&gt;&lt;div class=&quot;question__image slide-in-left&quot;&gt;&lt;img src=&quot;images/q1-a.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $FB to it +3)(set: $UN to it + 2)(set: $TB to it + 1)(set: $SF to it +1)(set: $PM to it +1)(set: $personality to it + (a:&quot;Creative&quot;))(goto: &quot;pq2&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link: &#39;&lt;div class=&quot;question__text&quot;&gt;Colors inside of the lines&lt;/div&gt;&lt;div class=&quot;question__image slide-in-right&quot;&gt;&lt;img src=&quot;images/q1-b.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $SF to it +2)(set: $TB to it + 2)(set: $PM to it + 2)(set: $UN to it + 1)(set: $personality to it + (a:&quot;Practical&quot;))(goto: &quot;pq2&quot;)]&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;QUIZ: FIND YOUR PATH QUIZ&lt;/span&gt;&lt;img src=&quot;images/ps-logo.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&lt;/div&gt;
+<tw-passagedata pid="1" name="pq1" tags="" position="107,397" size="100,100">(set: $FB to 0)(set: $TB to 0)(set: $UN to 0)(set: $SF to 0)(set: $PM to 0)(set:$personality to (a: ))&lt;div class=&quot;main-background personality&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-personality.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one &quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;You are a person who&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link: &#39;&lt;div class=&quot;question__text&quot;&gt;Colors outside of the lines&lt;/div&gt;&lt;div class=&quot;question__image slide-in-left&quot;&gt;&lt;img src=&quot;images/q1-a.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $FB to it +3)(set: $UN to it + 2)(set: $TB to it + 1)(set: $SF to it +1)(set: $PM to it +1)(set: $personality to it + (a:&quot;Creative&quot;))(goto: &quot;pq2&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link: &#39;&lt;div class=&quot;question__text&quot;&gt;Colors inside of the lines&lt;/div&gt;&lt;div class=&quot;question__image slide-in-right&quot;&gt;&lt;img src=&quot;images/q1-b.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $SF to it +2)(set: $TB to it + 2)(set: $PM to it + 2)(set: $UN to it + 1)(set: $personality to it + (a:&quot;Practical&quot;))(goto: &quot;pq2&quot;)]&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;FIND YOUR PATH QUIZ&lt;/span&gt;<span class="presented-by">Presented by Pathstream <img src="images/ps-logo.png"> </span> &lt;/img&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;script&gt;
 gtag('event', 'page_view', {
-  quiz_part: 'personality',
-  quiz_question: 1,
+  event_category: 'quiz1',
+  event_label: 'Personality Q1',
 });
-
 $(&#39;tw-passage&#39;).hide().fadeIn(400);
 startAnimations(1)
 
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="2" name="pq2" tags="" position="215,398" size="100,100">&lt;div class=&quot;main-background personality&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-personality.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;You are a person who enjoys&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;Having a plan&lt;/div&gt;&lt;div class=&quot;question__image slide-in-top&quot;&gt;&lt;img src=&quot;images/q3-b.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $FB to it + 2)(set: $UN to it + 1)(set: $TB to it + 1)(set: $SF to it +1)(set: $PM to it + 1)(set: $personality to it + (a:&quot;Firm&quot;))(goto: &quot;pq3&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;Going with the flow&lt;/div&gt;&lt;div class=&quot;question__image slide-in-bottom&quot;&gt;&lt;img src=&quot;images/q3-a.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $FB to it + 1)(set: $TB to it + 2)(set: $SF to it + 2)(set: $UN to it + 2)(set: $PM to it + 1)(set: $personality to it + (a:&quot;Flexible&quot;))(goto: &quot;pq3&quot;)]&lt;/div&gt;&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;QUIZ: FIND YOUR PATH QUIZ&lt;/span&gt;&lt;img src=&quot;images/ps-logo.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&lt;/div&gt;&lt;script&gt; 
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="2" name="pq2" tags="" position="215,398" size="100,100">&lt;div class=&quot;main-background personality&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-personality.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;You are a person who enjoys&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;Having a plan&lt;/div&gt;&lt;div class=&quot;question__image slide-in-top&quot;&gt;&lt;img src=&quot;images/q3-b.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $FB to it + 2)(set: $UN to it + 1)(set: $TB to it + 1)(set: $SF to it +1)(set: $PM to it + 1)(set: $personality to it + (a:&quot;Firm&quot;))(goto: &quot;pq3&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;Going with the flow&lt;/div&gt;&lt;div class=&quot;question__image slide-in-bottom&quot;&gt;&lt;img src=&quot;images/q3-a.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $FB to it + 1)(set: $TB to it + 2)(set: $SF to it + 2)(set: $UN to it + 2)(set: $PM to it + 1)(set: $personality to it + (a:&quot;Flexible&quot;))(goto: &quot;pq3&quot;)]&lt;/div&gt;&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;FIND YOUR PATH QUIZ&lt;/span&gt;<span class="presented-by">Presented by Pathstream <img src="images/ps-logo.png"> </span> &lt;/img&gt;&lt;/div&gt;&lt;/div&gt;&lt;script&gt; 
   gtag('event', 'page_view', {
-    quiz_part: 'personality',
-    quiz_question: 2,
+    event_category: 'quiz1',
+    event_label: 'Personality Q2',
   });
 startAnimations(1)
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="3" name="pq3" tags="" position="333,399" size="100,100">&lt;div class=&quot;main-background personality&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-personality.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;You prefer a weekend&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;With no social plans&lt;/div&gt;&lt;div class=&quot;question__image slide-in-bottom&quot;&gt;&lt;img src=&quot;images/q4-b.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $TB to it + 2)(set: $SF to it +1)(set: $UN to it + 3)(set: $PM to it + 1)(set: $personality to it + (a:&quot;Introvert&quot;))(goto: &quot;pq4&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;Full of social plans&lt;/div&gt;&lt;div class=&quot;question__image slide-in-top&quot;&gt;&lt;img src=&quot;images/q4-a.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $FB to it + 3)(set: $TB to it + 1)(set: $SF to it +2)(set: $PM to it + 2)(set: $personality to it + (a:&quot;Extrovert&quot;))(goto: &quot;pq4&quot;)]&lt;/div&gt;&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;QUIZ: FIND YOUR PATH QUIZ&lt;/span&gt;&lt;img src=&quot;images/ps-logo.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&lt;/div&gt;&lt;script&gt;
- 
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="3" name="pq3" tags="" position="333,399" size="100,100">&lt;div class=&quot;main-background personality&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-personality.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;You prefer a weekend&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;With no social plans&lt;/div&gt;&lt;div class=&quot;question__image slide-in-bottom&quot;&gt;&lt;img src=&quot;images/q4-b.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $TB to it + 2)(set: $SF to it +1)(set: $UN to it + 3)(set: $PM to it + 1)(set: $personality to it + (a:&quot;Introvert&quot;))(goto: &quot;pq4&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;Full of social plans&lt;/div&gt;&lt;div class=&quot;question__image slide-in-top&quot;&gt;&lt;img src=&quot;images/q4-a.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $FB to it + 3)(set: $TB to it + 1)(set: $SF to it +2)(set: $PM to it + 2)(set: $personality to it + (a:&quot;Extrovert&quot;))(goto: &quot;pq4&quot;)]&lt;/div&gt;&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;FIND YOUR PATH QUIZ&lt;/span&gt;<span class="presented-by">Presented by Pathstream <img src="images/ps-logo.png"> </span> &lt;/img&gt;&lt;/div&gt;&lt;/div&gt;&lt;script&gt;
+  gtag('event', 'page_view', {
+    event_category: 'quiz1',
+    event_label: 'Personality Q3',
+  });
   startAnimations(1)
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="4" name="pq4" tags="" position="453,402" size="100,100">&lt;div class=&quot;main-background personality&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-personality.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;You are a person who focuses more on&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;The what&lt;/div&gt;&lt;div class=&quot;question__image slide-in-left&quot;&gt;&lt;img src=&quot;images/pq4-a.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $FB to it + 1.5)(set: $TB to it + 1)(set: $SF to it + 1.5)(set: $UN to it + 3)(set: $PM to it + 2)(set: $personality to it + (a:&quot;Logical&quot;))(goto: &quot;pq5&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;The why&lt;/div&gt;&lt;div class=&quot;question__image slide-in-right&quot;&gt;&lt;img src=&quot;images/pq4-b.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $FB to it + 1.5)(set: $TB to it + 2)(set: $SF to it + 1.5)(set: $PM to it + 1)(set: $personality to it + (a:&quot;Curious&quot;))(goto: &quot;pq5&quot;)]&lt;/div&gt;&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;QUIZ: FIND YOUR PATH QUIZ&lt;/span&gt;&lt;img src=&quot;images/ps-logo.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&lt;/div&gt;&lt;script&gt;
-
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="4" name="pq4" tags="" position="453,402" size="100,100">&lt;div class=&quot;main-background personality&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-personality.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;You are a person who focuses more on&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;The what&lt;/div&gt;&lt;div class=&quot;question__image slide-in-left&quot;&gt;&lt;img src=&quot;images/pq4-a.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $FB to it + 1.5)(set: $TB to it + 1)(set: $SF to it + 1.5)(set: $UN to it + 3)(set: $PM to it + 2)(set: $personality to it + (a:&quot;Logical&quot;))(goto: &quot;pq5&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;The why&lt;/div&gt;&lt;div class=&quot;question__image slide-in-right&quot;&gt;&lt;img src=&quot;images/pq4-b.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $FB to it + 1.5)(set: $TB to it + 2)(set: $SF to it + 1.5)(set: $PM to it + 1)(set: $personality to it + (a:&quot;Curious&quot;))(goto: &quot;pq5&quot;)]&lt;/div&gt;&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;FIND YOUR PATH QUIZ&lt;/span&gt;<span class="presented-by">Presented by Pathstream <img src="images/ps-logo.png"> </span> &lt;/img&gt;&lt;/div&gt;&lt;/div&gt;&lt;script&gt;
+  gtag('event', 'page_view', {
+    event_category: 'quiz1',
+    event_label: 'Personality Q4',
+  });
   startAnimations(1)
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="5" name="pq5" tags="" position="567,403" size="100,100">&lt;div class=&quot;main-background personality&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-personality.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one rotate&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two rotate&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three rotate&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;You are a person who enjoys&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;Variety&lt;/div&gt;&lt;div class=&quot;question__image slide-in-top&quot;&gt;&lt;img src=&quot;images/pq5-a.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $FB to it + 3)(set: $TB to it + 1)(set: $SF to it +1)(set: $PM to it + 2)(set: $personality to it + (a:&quot;Adaptive&quot;))(goto: &quot;pq6&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link: &#39;&lt;div class=&quot;question__text&quot;&gt;Routine&lt;/div&gt;&lt;div class=&quot;question__image slide-in-bottom&quot;&gt;&lt;img src=&quot;images/pq5-b.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $TB to it + 2)(set: $SF to it +2)(set: $UN to it + 3)(set: $PM to it + 1)(set: $personality to it + (a:&quot;Constant&quot;))(goto: &quot;pq6&quot;)]&lt;/div&gt;&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;QUIZ: FIND YOUR PATH QUIZ&lt;/span&gt;&lt;img src=&quot;images/ps-logo.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&lt;/div&gt;&lt;script&gt;
-
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="5" name="pq5" tags="" position="567,403" size="100,100">&lt;div class=&quot;main-background personality&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-personality.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one rotate&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two rotate&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three rotate&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;You are a person who enjoys&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;Variety&lt;/div&gt;&lt;div class=&quot;question__image slide-in-top&quot;&gt;&lt;img src=&quot;images/pq5-a.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $FB to it + 3)(set: $TB to it + 1)(set: $SF to it +1)(set: $PM to it + 2)(set: $personality to it + (a:&quot;Adaptive&quot;))(goto: &quot;pq6&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link: &#39;&lt;div class=&quot;question__text&quot;&gt;Routine&lt;/div&gt;&lt;div class=&quot;question__image slide-in-bottom&quot;&gt;&lt;img src=&quot;images/pq5-b.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $TB to it + 2)(set: $SF to it +2)(set: $UN to it + 3)(set: $PM to it + 1)(set: $personality to it + (a:&quot;Constant&quot;))(goto: &quot;pq6&quot;)]&lt;/div&gt;&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;FIND YOUR PATH QUIZ&lt;/span&gt;<span class="presented-by">Presented by Pathstream <img src="images/ps-logo.png"> </span> &lt;/img&gt;&lt;/div&gt;&lt;/div&gt;&lt;script&gt;
+  gtag('event', 'page_view', {
+    event_category: 'quiz1',
+    event_label: 'Personality Q5',
+  });
   startAnimations(1)
 
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="6" name="iq1" tags="" position="102,522" size="100,100">(set:$interests to (a: ))&lt;div class=&quot;main-background interests&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-interests.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one rotate&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two rotate&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three rotate&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;Your game of choice is a&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;Video game&lt;/div&gt;&lt;div class=&quot;question__image slide-in-left&quot;&gt;&lt;img src=&quot;images/iq1-a.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $FB to it +2)(set: $TB to it +1.5)(set: $UN to it +3)(set: $PM to it +1)(set: $interests to it + (a:&quot;Video game&quot;))(goto: &quot;iq2&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link: &#39;&lt;div class=&quot;question__text&quot;&gt;Board game&lt;/div&gt;&lt;div class=&quot;question__image slide-in-right&quot;&gt;&lt;img src=&quot;images/iq1-b.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $FB to it +1)(set: $TB to it +1.5)(set: $SF to it +3)(set: $PM to it +2)(set: $interests to it + (a:&quot;Board games&quot;))(goto: &quot;iq2&quot;)]&lt;/div&gt;&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;QUIZ: FIND YOUR PATH QUIZ&lt;/span&gt;&lt;img src=&quot;images/ps-logo.png&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;script&gt;
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="6" name="iq1" tags="" position="102,522" size="100,100">(set:$interests to (a: ))&lt;div class=&quot;main-background interests&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-interests.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one rotate&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two rotate&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three rotate&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;Your game of choice is a&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;Video game&lt;/div&gt;&lt;div class=&quot;question__image slide-in-left&quot;&gt;&lt;img src=&quot;images/iq1-a.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $FB to it +2)(set: $TB to it +1.5)(set: $UN to it +3)(set: $PM to it +1)(set: $interests to it + (a:&quot;Video game&quot;))(goto: &quot;iq2&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link: &#39;&lt;div class=&quot;question__text&quot;&gt;Board game&lt;/div&gt;&lt;div class=&quot;question__image slide-in-right&quot;&gt;&lt;img src=&quot;images/iq1-b.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $FB to it +1)(set: $TB to it +1.5)(set: $SF to it +3)(set: $PM to it +2)(set: $interests to it + (a:&quot;Board games&quot;))(goto: &quot;iq2&quot;)]&lt;/div&gt;&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;FIND YOUR PATH QUIZ&lt;/span&gt;<span class="presented-by">Presented by Pathstream <img src="images/ps-logo.png"> </span> &lt;/div&gt;&lt;/div&gt;&lt;script&gt;
 $(&#39;tw-passage&#39;).hide().fadeIn(400);
+  gtag('event', 'page_view', {
+    event_category: 'quiz1',
+    event_label: 'Interests Q1',
+  });
   startAnimations(1)
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="7" name="results" tags="" position="913,642" size="100,100">&lt;div class=&quot;main-background results&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div&gt;&lt;span class=&quot;header__lead&quot;&gt;Your recommended path:&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;try-again&quot;&gt;&lt;span&gt;[[Take the Quiz Again|pq1]]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;results-container&quot;&gt;
-&lt;div class=&quot;results-description&quot; style=&quot;color: black&quot;&gt;&lt;h2&gt;&lt;/h2&gt;&lt;ul class=&quot;results-list&quot;&gt;&lt;li&gt;&lt;span&gt;Traits&lt;/span&gt;&lt;p class=&quot;personality-text&quot;&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Interests&lt;/span&gt;&lt;p class=&quot;interests-text&quot;&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Career Description&lt;/span&gt;&lt;p class="description-text"&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div class=&quot;chart-container&quot;&gt;&lt;canvas id=&quot;myChart&quot;&gt;&lt;/canvas&gt;&lt;div class=&quot;cta&quot;&gt;&lt;a&gt;  <svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 100"><g transform="translate(50 50) scale(0.69 -0.69) rotate(-90) translate(-50 -50)" ><svg fill="#001b58"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 10 10" enable-background="new 0 0 10 10" xml:space="preserve"><g><path stroke-width="2" stroke="#001b58" d="M1.089,3.191c0-0.162,0.131-0.295,0.293-0.295c0.078,0,0.152,0.031,0.207,0.086l3.412,3.412l3.412-3.412   C8.53,2.871,8.716,2.873,8.827,2.99c0.111,0.113,0.111,0.295,0,0.408L5.208,7.018c-0.113,0.115-0.299,0.115-0.414,0L1.175,3.398   C1.12,3.344,1.089,3.27,1.089,3.191z"></path></g></svg></g></svg>&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;QUIZ: FIND YOUR PATH QUIZ&lt;/span&gt;&lt;img src=&quot;images/ps-logo.png&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="7" name="results" tags="" position="913,642" size="100,100"><div class="main-background results"><div class="header"><div class="header__left"><span class="header__lead"></span></div><div class="try-again"><span>[[Take the Quiz Again|pq1]]</span></div></div><div class="results-container"><div class="results-description"></div><div class="additional-details"><div class="results-description__short"><div class="results-traits"><span>TRAITS</span><p></p></div><div class="results-interests"><span>INTERESTS</span><p></p></div></div><div class="results__options"><p></p></div><div class="cta"><a><svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 100"><g transform="translate(50 50) scale(0.69 -0.69) rotate(-90) translate(-50 -50)" ><svg fill="#001b58"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 10 10" enable-background="new 0 0 10 10" xml:space="preserve"><g><path stroke-width="2" stroke="#001b58" d="M1.089,3.191c0-0.162,0.131-0.295,0.293-0.295c0.078,0,0.152,0.031,0.207,0.086l3.412,3.412l3.412-3.412   C8.53,2.871,8.716,2.873,8.827,2.99c0.111,0.113,0.111,0.295,0,0.408L5.208,7.018c-0.113,0.115-0.299,0.115-0.414,0L1.175,3.398   C1.12,3.344,1.089,3.27,1.089,3.191z"></path></g></svg></g></svg></a></div></div></div><div class="footer"><span class="header__title">FIND YOUR PATH QUIZ</span><span class="presented-by">Presented by Pathstream <img src="images/ps-logo.png"> </span> </div></div>
 &lt;script&gt;
+gtag('event', 'page_view', {
+  event_category: 'quiz1',
+  event_label: 'Results',
+});
 var resultsObj = {
-    DIGITAL_MARKETING: {
+    Digital_Marketing: {
         personality : &quot;Creative, adaptive, and a strategic thinker.&quot;,
         interests : &quot;Understanding and connecting with people, creating beautiful and engaging content.&quot;,
-        description: "Digital marketers do things like help a company manage their online advertising strategy. Create pieces of content for an Instagram campaign. Create social media content to reach new customers.  And even help manage influencer campaigns."
+        description: "<p>Digital marketers do things like help a company manage their online advertising strategy. Create pieces of content for an Instagram campaign. Create social media content to reach new customers.  And even help manage influencer campaigns.</p><p>When you think of digital marketing, you may only think of creating ads... but there's much more that's included in this position! A digital marketer must complete the following types of work to understand their potential customers and connect with them:<ul><li>Research</li><li>Analysis</li><li>Creation</li> <li>Online Relationship Building</li></ul></p>",
+        image: "images/digital-marketing.png"
     },
-	DATA_ANALYTICS: {
+	Data_Analytics: {
         personality : &quot;Curious, tactical, and comfortable working independently.&quot;,
         interests : &quot;Solving mysteries and identifying patterns, continual learning.&quot;,
-        description: "Data Analytics is the process of discovering and interpreting meaning from a collection of information known as data. Data analysts manipulate, organize, and process this information in order to uncover patterns and trends that can help inform business decisions."
+        description: "Data Analytics is the process of discovering and interpreting meaning from a collection of information known as data. Data analysts manipulate, organize, and process this information in order to uncover patterns and trends that can help inform business decisions.",
+        image: "images/data-analytics.png"
     },
-	SALESFORCE_ADMINISTRATION: {
+	Salesforce_Administration: {
         personality : &quot;Logical, strategic and solutions oriented.&quot;,
         interests : &quot;Sales, solving problems and optimizing systems.&quot;,
-        description: "Salesforce administrators know how to configure and use Salesforce's wide array of tools and settings to meet the needs of employees at a company. Salesforce administrators are able to apply the Salesforce platform to any business, non-profit, or organization to improve functionality and efficiency."
+        description: "Salesforce administrators know how to configure and use Salesforce's wide array of tools and settings to meet the needs of employees at a company. Salesforce administrators are able to apply the Salesforce platform to any business, non-profit, or organization to improve functionality and efficiency.",
+        img: "images/salesforce.png"
     },
-	IMMERSIVE_DESIGN: {
-        personality : &quot;Creative, adaptable and dedicated to the details.&quot;,
-        interests : &quot;Technology, design and solving complex problems.&quot;,
-        description: "An immersive designer sits at the heart of an Extended Reality development team: while a 3D artist might make custom assets, and a developer constructs scripts to add custom functionality, an immersive designer brings it all together in a scene. Using 3D assets, they construct the environments or customize the experience. They are responsible for arranging 3D objects, configuring interactions, designing the UI, and implementing scripts, whether they write them themselves or not."
+	Immersive_Design: {
+        personality : &quot;Creative, adaptable and dedicated to the details. You're the type of person who gets things done.&quot;,
+        interests : &quot;Technology, design and solving complex problems. You love getting lost in the details and bringing things to life.&quot;,
+        description: "<p>An immersive designer sits at the heart of an Extended Reality development team: while a 3D artist might make custom assets, and a developer constructs scripts to add custom functionality, an immersive designer brings it all together in a scene.</p> <p>Using 3D assets, they construct the environments or customize the experience. They are responsible for arranging 3D objects, configuring interactions, designing the UI, and implementing scripts, whether they write them themselves or not.</p>",
+        image: "images/unity.png"
     },
-	PROJECT_MANAGEMENT: {
+	Project_Management: {
         personality : &quot;Organized, cooperative and always taking initiative.&quot;,
         interests : &quot;Planning events, organizing teams and achieving a goal.&quot;,
-        description: "Project managers are responsible for ensuring the successful delivery and completion of a project. This means they guide the project through its initiation, planning, executing, and closing the project. Their primary focus is to use knowledge, tools, and techniques to lead a team in achieving project goals and mitigating project risks within a set timeline and budget."
+        description: "Project managers are responsible for ensuring the successful delivery and completion of a project. This means they guide the project through its initiation, planning, executing, and closing the project. Their primary focus is to use knowledge, tools, and techniques to lead a team in achieving project goals and mitigating project risks within a set timeline and budget.",
+        image: "images/project-manage.png"
     } 
 }
 
 var arrayData = [harlowe.State.variables[&#39;FB&#39;], harlowe.State.variables[&#39;TB&#39;], harlowe.State.variables[&#39;SF&#39;], harlowe.State.variables[&#39;UN&#39;], harlowe.State.variables[&#39;PM&#39;]]
-var arrayLabel = [&#39;DIGITAL MARKETING&#39;, &#39;DATA ANALYTICS&#39;, &#39;SALESFORCE ADMINISTRATION&#39;, &#39;IMMERSIVE DESIGN&#39;, &#39;PROJECT MANAGEMENT&#39;]
+var arrayLabel = [&#39;Digital Marketing&#39;, &#39;Data Analytics&#39;, &#39;Salesforce Administration&#39;, &#39;Immersive Design&#39;, &#39;Project Management&#39;]
 
 var arrayOfObj = arrayLabel.map(function(d, i) {
     return {
@@ -997,69 +1089,20 @@ var arrayOfObj = arrayLabel.map(function(d, i) {
     newArrayData.push(d.data);
   });
 
-$(&#39;.results-description h2&#39;).text(newArrayLabel[0])
+$(&#39;.header__lead&#39;).html(`Your recommended path is <span>${newArrayLabel[0]}.</span>`)
+
 var formattedName = newArrayLabel[0].replace(&#39; &#39;, &#39;_&#39;)
-$(&quot;.personality-text&quot;).text(resultsObj[formattedName][&#39;personality&#39;])
-$(&quot;.interests-text&quot;).text(resultsObj[formattedName][&#39;interests&#39;])
+$(&quot;.results-traits p&quot;).text(resultsObj[formattedName][&#39;personality&#39;])
+$(&quot;.results-interests p&quot;).text(resultsObj[formattedName][&#39;interests&#39;])
 $(&quot;.description-text&quot;).text(resultsObj[formattedName][&#39;description&#39;])
+$('.results__options').html(`<p>You also scored high for careers in <a>${newArrayLabel[1]}</a> and <a>${newArrayLabel[2]}</a>.</p>`)
+
+$('.header__left').prepend('<img class="result-icon"></img>')
+$('.result-icon').attr('src', resultsObj[formattedName]["image"])
+$('.results-description').html(resultsObj[formattedName]["description"])
 var linkText = &quot;Explore a career in &quot; + newArrayLabel[0].toLowerCase()
 var linkA = $(&#39;.cta a&#39;)
 $(linkA).prepend(linkText)
-
-
-
-var ctx = document.getElementById(&#39;myChart&#39;).getContext(&#39;2d&#39;);
-Chart.defaults.global.defaultFontFamily= &#39;Lato, sans-serif&#39;
-Chart.defaults.global.defaultFontColor = &#39;#001B58&#39;;
-Chart.defaults.global.defaultFontStyle = &#39;Bold&#39;
-var chart = new Chart(ctx, {
-    // The type of chart we want to create
-    type: &#39;horizontalBar&#39;,
-
-    // The data for our dataset
-    data: {
-        labels: newArrayLabel,
-        datasets: [{
-            data: newArrayData,
-            backgroundColor: [&#39;#001B58&#39;, &#39;#95D6F8&#39;, &#39;#95D6F8&#39;, &#39;#95D6F8&#39;, &#39;#95D6F8&#39;]
-        }],
-    },
-
-    // Configuration options go here
-    options: {
-        scales: {
-            xAxes: [{
-                ticks: {
-                  beginAtZero: true,
-                  display: false
-                  
-                },
-				gridLines: {
-                display:false,
-                drawBorder:false
-            }
-				
-            }],
-			yAxes: [{
-			gridLines: {
-                display:false,
-                drawBorder:false
-            },
-            ticks: {
-
-            }
-			}]
-        },
-        title: {
-            display: false,
-            text: &#39;Your Career Compatibility&#39;
-        },
-        legend: {
-            display: false
-        }
-    }
-});
-
 
 var sendData = JSON.stringify({
 &quot;Tableau&quot;: harlowe.State.variables[&#39;TB&#39;], 
@@ -1078,39 +1121,68 @@ method:&quot;POST&quot;,
 dataType: &quot;json&quot;,
 data: sendData
 }).done(function() {});
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="8" name="pq6" tags="" position="685,403" size="100,100">&lt;div class=&quot;main-background personality&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-personality.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;You are a person who prefers&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;Imagining what can be&lt;/div&gt;&lt;div class=&quot;question__image slide-in-bottom&quot;&gt;&lt;img src=&quot;images/pq6-a.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $FB to it + 2)(set: $TB to it + 2)(set: $SF to it + 1)(set: $PM to it + 2)(set: $personality to it + (a:&quot;Strategic&quot;))(goto: &quot;pq7&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link: &#39;&lt;div class=&quot;question__text&quot;&gt;Improving what is&lt;/div&gt;&lt;div class=&quot;question__image slide-in-top&quot;&gt;&lt;img src=&quot;images/pq6-b.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $FB to it + 1)(set: $TB to it + 1)(set: $SF to it + 2)(set: $UN to it + 3)(set: $PM to it + 1)(set: $personality to it + (a:&quot;Tactical&quot;))(goto: &quot;pq7&quot;)]&lt;/div&gt;&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;QUIZ: FIND YOUR PATH QUIZ&lt;/span&gt;&lt;img src=&quot;images/ps-logo.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&lt;/div&gt;&lt;script&gt;
-  
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="8" name="pq6" tags="" position="685,403" size="100,100">&lt;div class=&quot;main-background personality&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-personality.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;You are a person who prefers&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;Imagining what can be&lt;/div&gt;&lt;div class=&quot;question__image slide-in-bottom&quot;&gt;&lt;img src=&quot;images/pq6-a.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $FB to it + 2)(set: $TB to it + 2)(set: $SF to it + 1)(set: $PM to it + 2)(set: $personality to it + (a:&quot;Strategic&quot;))(goto: &quot;pq7&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link: &#39;&lt;div class=&quot;question__text&quot;&gt;Improving what is&lt;/div&gt;&lt;div class=&quot;question__image slide-in-top&quot;&gt;&lt;img src=&quot;images/pq6-b.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $FB to it + 1)(set: $TB to it + 1)(set: $SF to it + 2)(set: $UN to it + 3)(set: $PM to it + 1)(set: $personality to it + (a:&quot;Tactical&quot;))(goto: &quot;pq7&quot;)]&lt;/div&gt;&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;FIND YOUR PATH QUIZ&lt;/span&gt;<span class="presented-by">Presented by Pathstream <img src="images/ps-logo.png"> </span> &lt;/div&gt;&lt;/div&gt;&lt;script&gt;
+  gtag('event', 'page_view', {
+    event_category: 'quiz1',
+    event_label: 'Personality Q6',
+  });
     startAnimations(1)
 
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="9" name="pq7" tags="" position="799,403" size="100,100">&lt;div class=&quot;main-background personality&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-personality.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;You do your best work&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;On your own&lt;/div&gt;&lt;div class=&quot;question__image slide-in-left&quot;&gt;&lt;img src=&quot;images/pq7-b.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $FB to it + 1)(set: $TB to it + 2)(set: $SF to it + 2)(set: $UN to it + 3)(set: $personality to it + (a:&quot;Independent&quot;))(goto: &quot;pq8&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;On a team&lt;/div&gt;&lt;div class=&quot;question__image slide-in-right&quot;&gt;&lt;img src=&quot;images/pq7-a.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $FB to it + 2)(set: $TB to it + 1)(set: $SF to it + 1)(set: $PM to it + 3)(set: $personality to it + (a:&quot;Cooperative&quot;))(goto: &quot;pq8&quot;)]&lt;/div&gt;&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;QUIZ: FIND YOUR PATH QUIZ&lt;/span&gt;&lt;img src=&quot;images/ps-logo.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&lt;/div&gt;&lt;script&gt;
-  
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="9" name="pq7" tags="" position="799,403" size="100,100">&lt;div class=&quot;main-background personality&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-personality.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;You do your best work&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;On your own&lt;/div&gt;&lt;div class=&quot;question__image slide-in-left&quot;&gt;&lt;img src=&quot;images/pq7-b.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $FB to it + 1)(set: $TB to it + 2)(set: $SF to it + 2)(set: $UN to it + 3)(set: $personality to it + (a:&quot;Independent&quot;))(goto: &quot;pq8&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;On a team&lt;/div&gt;&lt;div class=&quot;question__image slide-in-right&quot;&gt;&lt;img src=&quot;images/pq7-a.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $FB to it + 2)(set: $TB to it + 1)(set: $SF to it + 1)(set: $PM to it + 3)(set: $personality to it + (a:&quot;Cooperative&quot;))(goto: &quot;pq8&quot;)]&lt;/div&gt;&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;FIND YOUR PATH QUIZ&lt;/span&gt;<span class="presented-by">Presented by Pathstream <img src="images/ps-logo.png"> </span> &lt;/img&gt;&lt;/div&gt;&lt;/div&gt;&lt;script&gt;
+  gtag('event', 'page_view', {
+    event_category: 'quiz1',
+    event_label: 'Personality Q7',
+  });
     startAnimations(1)
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="10" name="pq8" tags="" position="914,405" size="100,100">&lt;div class=&quot;main-background personality&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-personality.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one rotate&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two rotate&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three rotate&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;You are a person who tends to&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;Eliminate problems before they appear&lt;/div&gt;&lt;div class=&quot;question__image slide-in-top&quot;&gt;&lt;img src=&quot;images/pq8-a.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $FB to it + 2)(set: $TB to it + 1)(set: $SF to it + 2)(set: $UN to it + 1)(set: $PM to it + 3)(set: $personality to it + (a:&quot;Active&quot;))(goto: &quot;iq1&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link: &#39;&lt;div class=&quot;question__text&quot;&gt;Respond to problems as they happen&lt;/div&gt;&lt;div class=&quot;question__image slide-in-bottom&quot;&gt;&lt;img src=&quot;images/pq8-b.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $FB to it + 1)(set: $TB to it + 2)(set: $SF to it + 1)(set: $UN to it + 2)(set: $personality to it + (a:&quot;Reactive&quot;))(goto: &quot;iq1&quot;)]&lt;/div&gt;&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;QUIZ: FIND YOUR PATH QUIZ&lt;/span&gt;&lt;img src=&quot;images/ps-logo.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="10" name="pq8" tags="" position="914,405" size="100,100">&lt;div class=&quot;main-background personality&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-personality.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one rotate&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two rotate&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three rotate&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;You are a person who tends to&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;Eliminate problems before they appear&lt;/div&gt;&lt;div class=&quot;question__image slide-in-top&quot;&gt;&lt;img src=&quot;images/pq8-a.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $FB to it + 2)(set: $TB to it + 1)(set: $SF to it + 2)(set: $UN to it + 1)(set: $PM to it + 3)(set: $personality to it + (a:&quot;Active&quot;))(goto: &quot;iq1&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link: &#39;&lt;div class=&quot;question__text&quot;&gt;Respond to problems as they happen&lt;/div&gt;&lt;div class=&quot;question__image slide-in-bottom&quot;&gt;&lt;img src=&quot;images/pq8-b.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $FB to it + 1)(set: $TB to it + 2)(set: $SF to it + 1)(set: $UN to it + 2)(set: $personality to it + (a:&quot;Reactive&quot;))(goto: &quot;iq1&quot;)]&lt;/div&gt;&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;FIND YOUR PATH QUIZ&lt;/span&gt;<span class="presented-by">Presented by Pathstream <img src="images/ps-logo.png"> </span> &lt;/img&gt;&lt;/div&gt;&lt;/div&gt;
     &lt;script&gt;
-  
+    gtag('event', 'page_view', {
+      event_category: 'quiz1',
+      event_label: 'Personality Q8',
+    });
     startAnimations(1)
 
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="11" name="iq2" tags="" position="214,523" size="100,100">&lt;div class=&quot;main-background interests&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-interests.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one rotate&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two rotate&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three rotate&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;You would rather watch a&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;True crime documentary&lt;/div&gt;&lt;div class=&quot;question__image slide-in-bottom&quot;&gt;&lt;img src=&quot;images/iq2-a.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $FB to it +2)(set: $TB to it +2)(set: $SF to it +1)(set: $UN to it +2)(set: $PM to it +1)(set: $interests to it + (a:&quot;Mysteries&quot;))(goto: &quot;iq3&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link: &#39;&lt;div class=&quot;question__text&quot;&gt;Historical documentary&lt;/div&gt;&lt;div class=&quot;question__image slide-in-top&quot;&gt;&lt;img src=&quot;images/iq2-b.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $FB to it +1)(set: $TB to it +1)(set: $SF to it +2)(set: $UN to it +1)(set: $PM to it +1)(set: $interests to it + (a:&quot;History&quot;))(goto: &quot;iq3&quot;)]&lt;/div&gt;&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;QUIZ: FIND YOUR PATH QUIZ&lt;/span&gt;&lt;img src=&quot;images/ps-logo.png&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;script&gt;
-  
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="11" name="iq2" tags="" position="214,523" size="100,100">&lt;div class=&quot;main-background interests&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-interests.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one rotate&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two rotate&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three rotate&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;You would rather watch a&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;True crime documentary&lt;/div&gt;&lt;div class=&quot;question__image slide-in-bottom&quot;&gt;&lt;img src=&quot;images/iq2-a.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $FB to it +2)(set: $TB to it +2)(set: $SF to it +1)(set: $UN to it +2)(set: $PM to it +1)(set: $interests to it + (a:&quot;Mysteries&quot;))(goto: &quot;iq3&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link: &#39;&lt;div class=&quot;question__text&quot;&gt;Historical documentary&lt;/div&gt;&lt;div class=&quot;question__image slide-in-top&quot;&gt;&lt;img src=&quot;images/iq2-b.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $FB to it +1)(set: $TB to it +1)(set: $SF to it +2)(set: $UN to it +1)(set: $PM to it +1)(set: $interests to it + (a:&quot;History&quot;))(goto: &quot;iq3&quot;)]&lt;/div&gt;&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;FIND YOUR PATH QUIZ&lt;/span&gt;<span class="presented-by">Presented by Pathstream <img src="images/ps-logo.png"> </span> &lt;/div&gt;&lt;/div&gt;&lt;script&gt;
+  gtag('event', 'page_view', {
+    event_category: 'quiz1',
+    event_label: 'Interests Q2',
+  });
     startAnimations(1)
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="12" name="iq3" tags="" position="329,526" size="100,100">&lt;div class=&quot;main-background interests&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-interests.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one rotate&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two rotate&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three rotate&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;You get most of your news from&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;Social Media&lt;/div&gt;&lt;div class=&quot;question__image slide-in-left&quot;&gt;&lt;img src=&quot;images/iq3-a.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $FB to it +3)(set: $PM to it +2)(set: $interests to it + (a:&quot;Social Media/Pop Culture&quot;))(goto: &quot;iq4&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link: &#39;&lt;div class=&quot;question__text&quot;&gt;Traditional Media&lt;/div&gt;&lt;div class=&quot;question__image slide-in-right&quot;&gt;&lt;img src=&quot;images/iq3-b.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $TB to it +3)(set: $SF to it +3)(set: $UN to it +3)(set: $PM to it +1)(set: $interests to it + (a:&quot;Business / Finance / Sales&quot;))(goto: &quot;iq4&quot;)]&lt;/div&gt;&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;QUIZ: FIND YOUR PATH QUIZ&lt;/span&gt;&lt;img src=&quot;images/ps-logo.png&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;script&gt;
-  
-    startAnimations(1)
-
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="13" name="iq4" tags="" position="442,528" size="100,100">&lt;div class=&quot;main-background interests&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-interests.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one rotate&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two rotate&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three rotate&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;You are more interested in&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;Building something&lt;/div&gt;&lt;div class=&quot;question__image slide-in-bottom&quot;&gt;&lt;img src=&quot;images/iq4-a.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $TB to it +2)(set: $SF to it +3)(set: $UN to it +2)(set: $PM to it +3)(set: $interests to it + (a:&quot;Structure&quot;))(goto: &quot;iq5&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link: &#39;&lt;div class=&quot;question__text&quot;&gt;Designing something&lt;/div&gt;&lt;div class=&quot;question__image slide-in-top&quot;&gt;&lt;img src=&quot;images/iq4-b.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $FB to it +3)(set: $TB to it +1)(set: $UN to it +3)(set: $interests to it + (a:&quot;Design&quot;))(goto: &quot;iq5&quot;)]&lt;/div&gt;&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;QUIZ: FIND YOUR PATH QUIZ&lt;/span&gt;&lt;img src=&quot;images/ps-logo.png&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;script&gt;
-  
-    startAnimations(1)
-
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="14" name="iq5" tags="" position="560,529" size="100,100">&lt;div class=&quot;main-background interests&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-interests.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one rotate&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two rotate&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three rotate&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;You get excited by&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;Learning something new&lt;/div&gt;&lt;div class=&quot;question__image slide-in-top&quot;&gt;&lt;img src=&quot;images/iq5-a.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $FB to it +2)(set: $TB to it +1.5)(set: $UN to it +2)(set: $PM to it +1)(set: $interests to it + (a:&quot;Learning&quot;))(goto: &quot;iq6&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link: &#39;&lt;div class=&quot;question__text&quot;&gt;Executing on what you know&lt;/div&gt;&lt;div class=&quot;question__image slide-in-bottom&quot;&gt;&lt;img src=&quot;images/iq5-b.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $FB to it +1)(set: $TB to it +1.5)(set: $SF to it +3)(set: $UN to it +1)(set: $PM to it +2)(set: $interests to it + (a:&quot;Dilligence&quot;))(goto: &quot;iq6&quot;)]&lt;/div&gt;&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;QUIZ: FIND YOUR PATH QUIZ&lt;/span&gt;&lt;img src=&quot;images/ps-logo.png&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;script&gt;
-  
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="12" name="iq3" tags="" position="329,526" size="100,100">&lt;div class=&quot;main-background interests&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-interests.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one rotate&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two rotate&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three rotate&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;You get most of your news from&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;Social Media&lt;/div&gt;&lt;div class=&quot;question__image slide-in-left&quot;&gt;&lt;img src=&quot;images/iq3-a.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $FB to it +3)(set: $PM to it +2)(set: $interests to it + (a:&quot;Social Media/Pop Culture&quot;))(goto: &quot;iq4&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link: &#39;&lt;div class=&quot;question__text&quot;&gt;Traditional Media&lt;/div&gt;&lt;div class=&quot;question__image slide-in-right&quot;&gt;&lt;img src=&quot;images/iq3-b.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $TB to it +3)(set: $SF to it +3)(set: $UN to it +3)(set: $PM to it +1)(set: $interests to it + (a:&quot;Business / Finance / Sales&quot;))(goto: &quot;iq4&quot;)]&lt;/div&gt;&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;FIND YOUR PATH QUIZ&lt;/span&gt;<span class="presented-by">Presented by Pathstream <img src="images/ps-logo.png"> </span> &lt;/div&gt;&lt;/div&gt;&lt;script&gt;
+  gtag('event', 'page_view', {
+    event_category: 'quiz1',
+    event_label: 'Interests Q3',
+  });
     startAnimations(1)
 
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="15" name="iq7" tags="" position="779,528" size="100,100">&lt;div class=&quot;main-background interests&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-interests.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one rotate&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two rotate&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three rotate&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;In the workplace, you prefer&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;Having a boss&lt;/div&gt;&lt;div class=&quot;question__image slide-in-left&quot;&gt;&lt;img src=&quot;images/iq7-a.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $FB to it +1)(set: $TB to it +3)(set: $SF to it +3)(set: $UN to it +1)(set: $PM to it +3)(set: $interests to it + (a:&quot;Career Stability&quot;))(goto: &quot;sq1&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link: &#39;&lt;div class=&quot;question__text&quot;&gt;Being your own boss&lt;/div&gt;&lt;div class=&quot;question__image slide-in-right&quot;&gt;&lt;img src=&quot;images/iq7-b.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $FB to it +2)(set: $UN to it +2)(set: $interests to it + (a:&quot;Entrepreneurship&quot;))(goto: &quot;sq1&quot;)]&lt;/div&gt;&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;QUIZ: FIND YOUR PATH QUIZ&lt;/span&gt;&lt;img src=&quot;images/ps-logo.png&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;script&gt;
-  
+    
+
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="13" name="iq4" tags="" position="442,528" size="100,100">&lt;div class=&quot;main-background interests&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-interests.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one rotate&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two rotate&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three rotate&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;You are more interested in&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;Building something&lt;/div&gt;&lt;div class=&quot;question__image slide-in-bottom&quot;&gt;&lt;img src=&quot;images/iq4-a.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $TB to it +2)(set: $SF to it +3)(set: $UN to it +2)(set: $PM to it +3)(set: $interests to it + (a:&quot;Structure&quot;))(goto: &quot;iq5&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link: &#39;&lt;div class=&quot;question__text&quot;&gt;Designing something&lt;/div&gt;&lt;div class=&quot;question__image slide-in-top&quot;&gt;&lt;img src=&quot;images/iq4-b.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $FB to it +3)(set: $TB to it +1)(set: $UN to it +3)(set: $interests to it + (a:&quot;Design&quot;))(goto: &quot;iq5&quot;)]&lt;/div&gt;&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;FIND YOUR PATH QUIZ&lt;/span&gt;<span class="presented-by">Presented by Pathstream <img src="images/ps-logo.png"> </span> &lt;/div&gt;&lt;/div&gt;&lt;script&gt;
+  gtag('event', 'page_view', {
+    event_category: 'quiz1',
+    event_label: 'Interests Q4',
+  });
     startAnimations(1)
 
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="16" name="iq6" tags="" position="670,530" size="100,100">&lt;div class=&quot;main-background interests&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-interests.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one rotate&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two rotate&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three rotate&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;You prefer to spend time&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;Organizing&lt;/div&gt;&lt;div class=&quot;question__image slide-in-top&quot;&gt;&lt;img src=&quot;images/iq6-a.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $FB to it +2)(set: $TB to it +1)(set: $UN to it +1)(set: $PM to it +3)(set: $interests to it + (a:&quot;Planning / Organizing&quot;))(goto: &quot;iq7&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link: &#39;&lt;div class=&quot;question__text&quot;&gt;Optimizing&lt;/div&gt;&lt;div class=&quot;question__image slide-in-bottom&quot;&gt;&lt;img src=&quot;images/iq6-b.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $FB to it +1)(set: $TB to it + 2)(set: $SF to it + 3)(set: $UN to it +2)(set: $interests to it + (a:&quot;Optimization&quot;))(goto: &quot;iq7&quot;)]&lt;/div&gt;&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;QUIZ: FIND YOUR PATH QUIZ&lt;/span&gt;&lt;img src=&quot;images/ps-logo.png&quot;&gt;&lt;/div&gt;&lt;/div&gt;&gt;&lt;script&gt;
-  
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="14" name="iq5" tags="" position="560,529" size="100,100">&lt;div class=&quot;main-background interests&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-interests.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one rotate&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two rotate&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three rotate&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;You get excited by&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;Learning something new&lt;/div&gt;&lt;div class=&quot;question__image slide-in-top&quot;&gt;&lt;img src=&quot;images/iq5-a.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $FB to it +2)(set: $TB to it +1.5)(set: $UN to it +2)(set: $PM to it +1)(set: $interests to it + (a:&quot;Learning&quot;))(goto: &quot;iq6&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link: &#39;&lt;div class=&quot;question__text&quot;&gt;Executing on what you know&lt;/div&gt;&lt;div class=&quot;question__image slide-in-bottom&quot;&gt;&lt;img src=&quot;images/iq5-b.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $FB to it +1)(set: $TB to it +1.5)(set: $SF to it +3)(set: $UN to it +1)(set: $PM to it +2)(set: $interests to it + (a:&quot;Dilligence&quot;))(goto: &quot;iq6&quot;)]&lt;/div&gt;&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;FIND YOUR PATH QUIZ&lt;/span&gt;<span class="presented-by">Presented by Pathstream <img src="images/ps-logo.png"> </span> &lt;/div&gt;&lt;/div&gt;&lt;script&gt;
+  gtag('event', 'page_view', {
+    event_category: 'quiz1',
+    event_label: 'Interests Q5',
+  });
+    startAnimations(1)
+
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="15" name="iq7" tags="" position="779,528" size="100,100">&lt;div class=&quot;main-background interests&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-interests.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one rotate&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two rotate&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three rotate&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;In the workplace, you prefer&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;Having a boss&lt;/div&gt;&lt;div class=&quot;question__image slide-in-left&quot;&gt;&lt;img src=&quot;images/iq7-a.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $FB to it +1)(set: $TB to it +3)(set: $SF to it +3)(set: $UN to it +1)(set: $PM to it +3)(set: $interests to it + (a:&quot;Career Stability&quot;))(goto: &quot;sq1&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link: &#39;&lt;div class=&quot;question__text&quot;&gt;Being your own boss&lt;/div&gt;&lt;div class=&quot;question__image slide-in-right&quot;&gt;&lt;img src=&quot;images/iq7-b.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $FB to it +2)(set: $UN to it +2)(set: $interests to it + (a:&quot;Entrepreneurship&quot;))(goto: &quot;sq1&quot;)]&lt;/div&gt;&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;FIND YOUR PATH QUIZ&lt;/span&gt;<span class="presented-by">Presented by Pathstream <img src="images/ps-logo.png"> </span> &lt;/div&gt;&lt;/div&gt;&lt;script&gt;
+  gtag('event', 'page_view', {
+    event_category: 'quiz1',
+    event_label: 'Interests Q7',
+  });
+    startAnimations(1)
+
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="16" name="iq6" tags="" position="670,530" size="100,100">&lt;div class=&quot;main-background interests&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-interests.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one rotate&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two rotate&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three rotate&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;You prefer to spend time&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;Organizing&lt;/div&gt;&lt;div class=&quot;question__image slide-in-top&quot;&gt;&lt;img src=&quot;images/iq6-a.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $FB to it +2)(set: $TB to it +1)(set: $UN to it +1)(set: $PM to it +3)(set: $interests to it + (a:&quot;Planning / Organizing&quot;))(goto: &quot;iq7&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link: &#39;&lt;div class=&quot;question__text&quot;&gt;Optimizing&lt;/div&gt;&lt;div class=&quot;question__image slide-in-bottom&quot;&gt;&lt;img src=&quot;images/iq6-b.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $FB to it +1)(set: $TB to it + 2)(set: $SF to it + 3)(set: $UN to it +2)(set: $interests to it + (a:&quot;Optimization&quot;))(goto: &quot;iq7&quot;)]&lt;/div&gt;&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;FIND YOUR PATH QUIZ&lt;/span&gt;<span class="presented-by">Presented by Pathstream <img src="images/ps-logo.png"> </span> &lt;/div&gt;&lt;/div&gt;&gt;&lt;script&gt;
+  gtag('event', 'page_view', {
+    event_category: 'quiz1',
+    event_label: 'Interests Q6',
+  });
     startAnimations(1)
 
 &lt;/script&gt;</tw-passagedata><tw-passagedata pid="17" name="sq1" tags="" position="103,636" size="100,100">&lt;div class=&quot;main-background skills&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-skills.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one rotate&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two rotate&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three rotate&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;div class=&quot;skill&quot;&gt;&lt;span class=&quot;skill__type&quot;&gt;Spreadsheets and Data&lt;/span&gt;&lt;span class=&quot;skill__description&quot;&gt;Spreadsheets make you feel...&lt;/span&gt;
@@ -1124,8 +1196,12 @@ data: sendData
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;QUIZ: FIND YOUR PATH QUIZ&lt;/span&gt;&lt;img src=&quot;images/ps-logo.png&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;FIND YOUR PATH QUIZ&lt;/span&gt;<span class="presented-by">Presented by Pathstream <img src="images/ps-logo.png"> </span> &lt;/div&gt;&lt;/div&gt;
 &lt;script&gt;
+gtag('event', 'page_view', {
+  event_category: 'quiz1',
+  event_label: 'Skills Q1',
+});
 $(&#39;tw-passage&#39;).hide().fadeIn(400);
 startAnimations(2)
 &lt;/script&gt;</tw-passagedata><tw-passagedata pid="18" name="sq2" tags="" position="223,638" size="100,100">&lt;div class=&quot;main-background skills&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-skills.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one rotate&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two rotate&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three rotate&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;div class=&quot;skill&quot;&gt;&lt;span class=&quot;skill__type&quot;&gt;Programming&lt;/span&gt;&lt;span class=&quot;skill__description&quot;&gt;How do you feel about learning to code?&lt;/span&gt;
@@ -1139,7 +1215,12 @@ startAnimations(2)
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;QUIZ: FIND YOUR PATH QUIZ&lt;/span&gt;&lt;img src=&quot;images/ps-logo.png&quot;&gt;&lt;/div&gt;&lt;/div&gt;<script>startAnimations(2)</script></tw-passagedata>
+&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;FIND YOUR PATH QUIZ&lt;/span&gt;<span class="presented-by">Presented by Pathstream <img src="images/ps-logo.png"> </span> &lt;/div&gt;&lt;/div&gt;<script>
+   gtag('event', 'page_view', {
+    event_category: 'quiz1',
+    event_label: 'Skills Q2',
+  });
+startAnimations(2)</script></tw-passagedata>
 <tw-passagedata pid="19" name="sq3" tags="" position="337,638" size="100,100">&lt;div class=&quot;main-background skills&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-skills.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one rotate&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two rotate&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three rotate&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;div class=&quot;skill&quot;&gt;&lt;span class=&quot;skill__type&quot;&gt;Problem Solving&lt;/span&gt;&lt;span class=&quot;skill__description&quot;&gt;When faced with a complex problem you...&lt;/span&gt;
 &lt;table&gt;
 &lt;tbody&gt;
@@ -1151,7 +1232,12 @@ startAnimations(2)
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;QUIZ: FIND YOUR PATH QUIZ&lt;/span&gt;&lt;img src=&quot;images/ps-logo.png&quot;&gt;&lt;/div&gt;&lt;/div&gt;<script>startAnimations(2)</script></tw-passagedata>
+&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;FIND YOUR PATH QUIZ&lt;/span&gt;<span class="presented-by">Presented by Pathstream <img src="images/ps-logo.png"> </span> &lt;/div&gt;&lt;/div&gt;<script>
+ gtag('event', 'page_view', {
+    event_category: 'quiz1',
+    event_label: 'Skills Q3',
+  });
+  startAnimations(2)</script></tw-passagedata>
 <tw-passagedata pid="20" name="sq4" tags="" position="453,640" size="100,100">&lt;div class=&quot;main-background skills&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-skills.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one rotate&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two rotate&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three rotate&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;div class=&quot;skill&quot;&gt;&lt;span class=&quot;skill__type&quot;&gt;Organization&lt;/span&gt;&lt;span class=&quot;skill__description&quot;&gt;How do you stay organized?&lt;/span&gt;
 &lt;table&gt;
 &lt;tbody&gt;
@@ -1163,7 +1249,12 @@ startAnimations(2)
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;QUIZ: FIND YOUR PATH QUIZ&lt;/span&gt;&lt;img src=&quot;images/ps-logo.png&quot;&lt;/div&gt;&lt;/div&gt;<script>startAnimations(2)</script></tw-passagedata><tw-passagedata pid="21" name="sq5" tags="" position="564,639" size="100,100">&lt;div class=&quot;main-background skills&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-skills.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one rotate&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two rotate&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three rotate&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;div class=&quot;skill&quot;&gt;&lt;span class=&quot;skill__type&quot;&gt;Communication&lt;/span&gt;&lt;span class=&quot;skill__description&quot;&gt;You prefer to communicate your ideas using...&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;FIND YOUR PATH QUIZ&lt;/span&gt;&lt;img src=&quot;images/ps-logo.png&quot;&lt;/div&gt;&lt;/div&gt;<script>
+ gtag('event', 'page_view', {
+    event_category: 'quiz1',
+    event_label: 'Skills Q4',
+  });
+startAnimations(2)</script></tw-passagedata><tw-passagedata pid="21" name="sq5" tags="" position="564,639" size="100,100">&lt;div class=&quot;main-background skills&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-skills.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one rotate&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two rotate&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three rotate&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;div class=&quot;skill&quot;&gt;&lt;span class=&quot;skill__type&quot;&gt;Communication&lt;/span&gt;&lt;span class=&quot;skill__description&quot;&gt;You prefer to communicate your ideas using...&lt;/span&gt;
 &lt;table&gt;
 &lt;tbody&gt;
   &lt;tr&gt;
@@ -1174,7 +1265,12 @@ startAnimations(2)
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;QUIZ: FIND YOUR PATH QUIZ&lt;/span&gt;&lt;img src=&quot;images/ps-logo.png&quot;&gt;&lt;/div&gt;&lt;/div&gt;<script>startAnimations(2)</script></tw-passagedata><tw-passagedata pid="22" name="sq7" tags="" position="799,643" size="100,100">&lt;div class=&quot;main-background skills&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-skills.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one rotate&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two rotate&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three rotate&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;div class=&quot;skill&quot;&gt;&lt;span class=&quot;skill__type&quot;&gt;Career&lt;/span&gt;&lt;span class=&quot;skill__description&quot;&gt;What do you value most in a career?&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;FIND YOUR PATH QUIZ&lt;/span&gt;<span class="presented-by">Presented by Pathstream <img src="images/ps-logo.png"> </span> &lt;/div&gt;&lt;/div&gt;<script>
+ gtag('event', 'page_view', {
+    event_category: 'quiz1',
+    event_label: 'Skills Q5',
+  });
+startAnimations(2)</script></tw-passagedata><tw-passagedata pid="22" name="sq7" tags="" position="799,643" size="100,100">&lt;div class=&quot;main-background skills&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-skills.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one rotate&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two rotate&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three rotate&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;div class=&quot;skill&quot;&gt;&lt;span class=&quot;skill__type&quot;&gt;Career&lt;/span&gt;&lt;span class=&quot;skill__description&quot;&gt;What do you value most in a career?&lt;/span&gt;
 &lt;table&gt;
 &lt;tbody&gt;
   &lt;tr&gt;
@@ -1185,7 +1281,12 @@ startAnimations(2)
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;QUIZ: FIND YOUR PATH QUIZ&lt;/span&gt;&lt;img src=&quot;images/ps-logo.png&quot;&gt;&lt;/div&gt;&lt;/div&gt;<script>startAnimations(2)</script></tw-passagedata><tw-passagedata pid="23" name="sq6" tags="" position="685,643" size="100,100">&lt;div class=&quot;main-background skills&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-skills.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one rotate&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two rotate&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three rotate&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;div class=&quot;skill&quot;&gt;&lt;span class=&quot;skill__type&quot;&gt;Teamwork&lt;/span&gt;&lt;span class=&quot;skill__description&quot;&gt;When working in a team you...&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;FIND YOUR PATH QUIZ&lt;/span&gt;<span class="presented-by">Presented by Pathstream <img src="images/ps-logo.png"> </span> &lt;/div&gt;&lt;/div&gt;<script>
+ gtag('event', 'page_view', {
+    event_category: 'quiz1',
+    event_label: 'Skills Q7',
+  });
+startAnimations(2)</script></tw-passagedata><tw-passagedata pid="23" name="sq6" tags="" position="685,643" size="100,100">&lt;div class=&quot;main-background skills&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-skills.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one rotate&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two rotate&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three rotate&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;div class=&quot;skill&quot;&gt;&lt;span class=&quot;skill__type&quot;&gt;Teamwork&lt;/span&gt;&lt;span class=&quot;skill__description&quot;&gt;When working in a team you...&lt;/span&gt;
 &lt;table&gt;
 &lt;tbody&gt;
   &lt;tr&gt;
@@ -1196,7 +1297,12 @@ startAnimations(2)
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;QUIZ: FIND YOUR PATH QUIZ&lt;/span&gt;&lt;img src=&quot;images/ps-logo.png&quot;&gt;&lt;/div&gt;&lt;/div&gt;<script>startAnimations(2)</script></tw-passagedata></tw-storydata>
+&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;FIND YOUR PATH QUIZ&lt;/span&gt;<span class="presented-by">Presented by Pathstream <img src="images/ps-logo.png"> </span> &lt;/div&gt;&lt;/div&gt;<script>
+ gtag('event', 'page_view', {
+    event_category: 'quiz1',
+    event_label: 'Skills Q6',
+  });
+startAnimations(2)</script></tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
