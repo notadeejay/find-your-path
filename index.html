@@ -42,14 +42,14 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="Pathstream Career Diagnostics" startnode="1" creator="Twine" creator-version="2.3.9" ifid="471FC68C-194C-4CE6-9872-7AB9E265D86E" zoom="1" format="Harlowe" format-version="3.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap');
+<tw-storydata name="Pathstream Career Diagnostics" startnode="1" creator="Twine" creator-version="2.3.9" ifid="471FC68C-194C-4CE6-9872-7AB9E265D86E" zoom="1" format="Harlowe" format-version="3.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;600;700;800&display=swap');
 
-html, body { height: 100%;}
+body{margin:0; padding:0;}
 
 tw-story {
 width: 100%;
-height: 100vh;
 padding: 0;
+height: 100%;
 cursor: default;
 }
 
@@ -57,11 +57,13 @@ tw-passage {
 height: 100%;
 }
 
-.main-background{
+.main-background {
 width: 100%;
-height: 100vh;
+height: 100%;
 padding: 24px 40px;
 }
+
+
 
 .personality {
 background-color: #C9EDFB;
@@ -88,11 +90,11 @@ background-color: #FFD1B5;
 }
 
 .skills .footer {
-  padding: 20px 90px 40px;
+  padding: 10px 90px 20px;
 }
 
 .results .footer {
-  padding: 10px 108px 30px;
+  padding: 40px 165px 30px;
 }
 
 .header__left {
@@ -109,22 +111,37 @@ align-items: center;
 z-index: 9999;
 }
 
-.header__title, .try-again span, .try-again tw-link {
-font-family: Lato;
-font-style: normal;
-font-weight: bold;
-font-size: 16px;
+.header__title {
+font-family: 'Lato', sans-serif;
+font-weight: 800;
+font-size: 14px;
 line-height: 19px;
 letter-spacing: 0.09em;
 text-transform: uppercase;
 color: #001B58;
 }
 
+.try-again__button {
+  border-radius: 5px;
+  padding: 0px 15px;
+  background: #183549;
+  margin-top: 10px;
+}
+
+.try-again__button  tw-link {
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.09em;
+  color: #F5FBFF;
+}
+
 .try-again {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   padding-top: 10px;
+  text-align: right;
 }
 
 .sharing-links {
@@ -144,7 +161,8 @@ color: #001B58;
   fill: #FB6347;
 }
 .visited:hover {
-    color: #FFA500;
+    color: #039BE8;
+    opacity: 1;
 }
 
 .header__title img {
@@ -174,9 +192,9 @@ width: 300px;
 }
 
 .progress__label {
-font-family: Lato;
+font-family: 'Lato', sans-serif;
 font-style: normal;
-font-weight: 800;
+font-weight: 700;
 font-size: 14px;
 line-height: 24px;
 letter-spacing: 0.09em;
@@ -244,12 +262,9 @@ tw-transition-container {
 
 tw-link {
 outline: none;
-color: #1E557A;
+color: #001B58;
 }
 
-.question__image img {
-width: 300px;
-}
 
 
 
@@ -266,7 +281,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 padding: 80px 50px 20px;
-margin-top: 30px
+margin-top: 40px;
 }
 
 .framing-question {
@@ -317,7 +332,7 @@ margin-top: 20px;
 
 
 .visited {
-color: #1E557A;
+color: #F5FBFE;
 }
 
 tw-link:hover {
@@ -334,7 +349,7 @@ bottom: 0px;
 display: flex;
 justify-content: space-between;
 align-items: center;
-padding: 16px 220px 40px;
+padding: 10px 220px 20px;
 }
 
 .footer img {
@@ -365,50 +380,37 @@ font-family: Open Sans;
 }
 
 .results__options {
-  margin: 40px 0;
+  margin: 20px 0;
+  text-align: center;
 }
 
 .results__options p {
-  color: #001B58;
+  color: #000;
+  margin: 30px 0;
+  font-size: 20px;
+  line-height: 29.96px;
 }
 
 .results__options a {
   color: #FB6347;
   font-weight: 700;
-  border-bottom: 2px solid #FB6347;
 }
 
 
 
-.cta a{
-  display: flex;
-  font-size: 22px;
-  align-items: center;
+.course-link{
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
   padding: 5px;
   cursor: pointer;
   color: #fff;
-  font-weight: 700;
+  font-weight: 900;
   text-decoration: none;
-   box-sizing: border-box;
-   background: #039BE8;
-    border-radius: 5px;
-    padding: 2px 20px;
-    width: fit-content;
-
-}
-
-.cta svg {
-  height: 30px;
-  width: 40px;
-  stroke-width: 4;
-}
-
-
-
-
-
-.cta a path {
-  stroke: #FFF;
+  box-sizing: border-box;
+  background: #039BE8;
+  border-radius: 5px;
+  padding: 15px 40px 15px 20px;
+  width: fit-content;
 }
 
 .results-container {
@@ -420,30 +422,61 @@ align-content: center;
 }
 
 .results-description {
-width: 500px;
-height: 500px;
-background-color: #D6E6F1;
-padding: 20px 40px;
-overflow-y: scroll;
--ms-overflow-style: none; /* Internet Explorer 10+ */
-}
-
-.results-description p {
-font-family: Open Sans;
-font-size: 18px;
-font-weight: 400;
-color: #000;
-line-height: 30px;
-text-align: left;
+width: 42%;
+height: fit-content;
+background-color: #183549;
+padding: 30px 40px;
+border-radius: 5px; /* Internet Explorer 10+ */
 }
 
 .results-description p:first-child {
   margin-top: 0;
 }
 
-.results-description::-webkit-scrollbar {
-display: none; /* Safari and Chrome */
+.career-opportunity h2 + p {
+  margin-top: 5px;
 }
+
+.results-description p {
+font-family: Open Sans;
+font-size: 15px;
+font-weight: 400;
+color: #F5FBFE;
+line-height: 22px;
+text-align: left;
+}
+
+.program-details {
+    background-color: #D6E6F1;
+    border-radius: 5px;
+    padding: 30px 40px 40px;
+  }
+
+.career-opportunity h2 {
+  font-size: 16px;
+    font-weight: 700;
+    color: #F5FBFE;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.program-details h2 {
+  font-size: 35px;
+  line-height: 46.51px;
+  font-weight: 700;
+  color: #001B58;
+  margin: 0;
+}
+
+.program-description {
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.76px;
+    color: #000;
+    margin-bottom: 80px
+}
+
 
 ul span {
 padding: 0;
@@ -467,11 +500,11 @@ text-align: center;;
 
 
 td {
-padding: 80px 20px 50px;
+padding: 30px 20px 0px;
 border-radius: 5px;
-display:table-cell;
-width: 320px;
-height: 320px;
+display: table-cell;
+width: 250px;
+height: 250px;
 vertical-align: top;
 transition: box-shadow .3s;
 background-color: #E65940;
@@ -488,10 +521,7 @@ td:hover {
   -moz-box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-td tw-link {
-  font-size: 22px;
-  font-weight: 600;
-}
+
 
 td tw-link:hover {
   color: #fff;
@@ -513,8 +543,9 @@ border-spacing: 10px;
 
 table tw-link {
   color: #fff;
-  font-size: 30px;
- line-height: 41px;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: normal;
 }
 
 .results-description li {
@@ -525,18 +556,15 @@ table tw-link {
 
 .header__lead {
   color: #001B58;
-    font-family: Open Sans;
+    font-family: 'Lato', sans-serif;
     font-style: normal;
     font-weight: 800;
     font-size: 44px;
     line-height: 52px;
     display: inline-block;
-    width: 700px
+    width: 677px;
 }
 
-.header__lead span {
-  border-bottom: 6px dotted #D6E6F1;
-}
 
 .long-description {
 font-size: 16px;
@@ -547,43 +575,10 @@ padding: 0 20px;
 .additional-details {
 display: flex;
 flex-direction: column;
-width: 50%;
+width: 55%;
 }
 
-.results-description__short {
-  display: flex;
-  justify-content: space-between;
-}
 
-.results-interests, .results-traits {
-    width: 250px;
-    height: 250px;
-    color: black;
-    font-family: Open Sans;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 27px;
-    letter-spacing: 0.01em;
-    text-align: cetner;
-    border-radius: 50%;
-    padding-left: 2em;
-    padding-top: 1em;
-}
-
-.results-interests span, .results-traits span {
-  font-weight: 700;
-  letter-spacing: 1px;
-  font-size: 24px;
-}
-
-.results-interests {
-  background-color: #C9EDFB;
-}
-
-.results-traits {
-  background-color: #FEF4CB;
-}
 
 
 .results .header {
@@ -593,7 +588,26 @@ align-items: flex-start;
 }
 
 .results.main-background {
-  padding: 50px 108px;
+  padding: 50px 160px;
+  height: 100%;
+}
+
+.explainer-link a {
+  font-family: Lato;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: 0.5px;
+  color: #039BE8;
+  text-decoration: underline;
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.explainer-link a svg {
+  margin-left: 20px;
 }
 
 .slide-in-bottom {
@@ -727,6 +741,7 @@ align-items: flex-start;
 
 
 @media screen and (max-width: 1024px) {
+
   .question {
     width: 400px;
     height: 430px;
@@ -739,20 +754,98 @@ align-items: flex-start;
   .question tw-link {
     padding: 30px;
   }
+
+  .question__image img {
+    width: 180px;
+  }
+
+  .question__text {
+    font-size: 35px;
+    line-height: 42px;
+  }
+
+  td {
+    padding: 10px 20px 0px;
+    width: 225px;
+    height: 225px;
+  }
+
+  .results-container {
+    flex-direction: column;
 }
+
+.additional-details {
+  width: 100%;
+  margin: 40px 0px;
+  flex-direction: row;
+}
+
+.results .footer {
+  padding: 10px 50px 20px;
+}
+
+.results-description {
+  width: 100%;
+  overflow-y: initial;
+  height: 100%
+}
+
+
+.results__options {
+  text-align: center;
+  width: 33%;
+  margin: 60px 30px;
+}
+
+.program-details {
+  width: 70%;
+}
+
+.results.main-background {
+  padding: 50px;
+  height: fit-content;
+}
+
+.results .header {
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    height: 300px;
+}
+
+
+
+
+.explainer-link a {
+  font-size: 18px;
+}
+
+tw-story{
+  background: #F5FBFE;
+  overflow-y: scroll;
+}
+
+.try-again {
+  align-items: center;
+  flex-direction: column-reverse;
+}
+.sharing-links {
+  margin-top: 20px;
+}
+
+}
+
 @media screen and (max-width: 768px) {
  .questions {
-  margin-top: 90px;
+  margin-top: 50px;
  }
 
  .question tw-link {
-   padding: 40px 20px;
+   padding: 30px 50px;
  }
 
- .footer {
-  padding: 40px 80px;
- }
-
+ 
  table, thead, tbody, th, td, tr {
   display: block;
 } 
@@ -765,8 +858,8 @@ align-items: flex-start;
   padding: 0;
 }
 td tw-link {
-font-size: 26px;
-line-height: 32px;
+font-size: 22px;
+line-height: 30px;
 color: #fff;
 font-weight: 600;
 }
@@ -785,24 +878,15 @@ text-align: center;
 cursor: pointer;
 }
 
-tw-story{
-  background: #F5FBFE;
-  overflow-y: scroll;
+
+.footer {
+  padding: 20px 50px;
 }
 
 
-.cta {
-  margin: 20px auto 80px;
-}
 
 
-.results .header {
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-evenly;
-    text-align: center;
-    height: 300px;
-}
+
 
 .header__lead {
   font-size: 30px;
@@ -810,42 +894,6 @@ tw-story{
 }
 .try-again span tw-link {
     font-size: 14px;
-}
-
-.results-container {
-    flex-direction: column;
-}
-
-.additional-details {
-  width: 100%;
-  margin-top: 40px;
-}
-
-.results .footer {
-  display: none;
-}
-
-.results-description {
-  width: 100%;
-  overflow-y: initial;
-}
-
-.results-description__short {
-  justify-content: space-evenly;
-}
-
-.results__options {
-  text-align: center;
-  margin: 20px 0;
-}
-
-.results.main-background {
-  padding: 50px;
-}
-
-
-.intro .quiz-section {
-  opacity: 0;
 }
 
 .header__left {
@@ -859,31 +907,32 @@ tw-story{
 @media screen and (max-width: 480px) {
 
 .main-background {
-  padding: 20px 16px;
-  min-height: 760px;
+  padding: 20px 16px 80px;
 }
 
 .question {
-width: 200px;
-height: 350px;
+width: 225px;
+height: 225px;
 margin-top: 20px;
 }
 .questions {
-  margin-top: 50px;
+  margin-top: 30px;
+  flex-direction: column;
 }
 
 
 .footer {
+  flex-direction: column;
   padding: 20px;
 }
 
 .question__text, tw-link{
-font-size: 24px;
-line-height: 30px;
+font-size: 20px;
+line-height: 28px;
 }
 
 .question tw-link {
-  padding: 60px 20px;
+  padding: 20px 10px;
 }
 
 td tw-link {
@@ -904,7 +953,7 @@ line-height: 22px;
 }
 
 .skills .footer {
-    display:none;
+  padding: 20px;
 }
 
 .skills .footer img {
@@ -915,8 +964,9 @@ line-height: 22px;
 .skill h2 {
 font-size: 30px;
 }
+
 .question__image img {
-width: 150px;
+width: 100px;
 margin: 20px auto;
 }
 
@@ -963,12 +1013,25 @@ margin-left: 5px;
 width: 50px;
 }
 .header__title {
-font-size: 8px;
+font-size: 14px;
 line-height: 12px
 }
 
+.presented-by {
+  font-size: 11px;
+}
+
+.footer img {
+  width: 24px;
+  height: 24px;
+}
+
+.results__options p {
+  width: fit-content;
+}
 .results.main-background {
   padding: 10px;
+  height: fit-content;
 }
 .result-icon {
   width: 80px;
@@ -976,7 +1039,7 @@ line-height: 12px
 
 .header__lead {
   max-width: 320px;
-  font-size: 20px;
+  font-size: 25px;
   line-height: 32px;
 }
 
@@ -989,17 +1052,32 @@ line-height: 12px
   padding: 20px;
 }
 
-.results-interests, .results-traits {
-  margin: 5px;
-}
-.results-description__short {
-    align-items: center;
-    flex-direction: column
+.additional-details {
+  flex-direction: column;
 }
 
-.cta a {
+.program-details, .results__options {
+  width: 100%;
+}
+
+.results__options {
+  margin: 20px 0px;
+  padding: 20px;
+}
+
+.explainer-link a {
+  font-size: 14px;
+}
+
+.program-details h2 {
+  font-size: 25px;
+  line-height: 31.51px;
+}
+
+.course-link {
   line-height: 22px;
   font-size: 16px;
+  padding: 15px 20px;
 }
 
 }
@@ -1017,15 +1095,13 @@ line-height: 12px
 </script> 
 
 
-<tw-passagedata pid="1" name="pq1" tags="" position="107,397" size="100,100">(set: $FB to 0)(set: $TB to 0)(set: $UN to 0)(set: $SF to 0)(set: $PM to 0)(set:$personality to (a: ))&lt;div class=&quot;main-background personality&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-personality.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one &quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;You are a person who&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link: &#39;&lt;div class=&quot;question__text&quot;&gt;Colors outside of the lines&lt;/div&gt;&lt;div class=&quot;question__image slide-in-left&quot;&gt;&lt;img src=&quot;images/q1-a.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $FB to it +3)(set: $UN to it + 2)(set: $TB to it + 1)(set: $SF to it +1)(set: $PM to it +1)(set: $personality to it + (a:&quot;Creative&quot;))(goto: &quot;pq2&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link: &#39;&lt;div class=&quot;question__text&quot;&gt;Colors inside of the lines&lt;/div&gt;&lt;div class=&quot;question__image slide-in-right&quot;&gt;&lt;img src=&quot;images/q1-b.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $SF to it +2)(set: $TB to it + 2)(set: $PM to it + 2)(set: $UN to it + 1)(set: $personality to it + (a:&quot;Practical&quot;))(goto: &quot;pq2&quot;)]&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;FIND YOUR PATH QUIZ&lt;/span&gt;<span class="presented-by">Presented by Pathstream <img src="images/ps-logo.png"> </span> &lt;/img&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;script&gt;
+<tw-passagedata pid="1" name="pq1" tags="" position="107,397" size="100,100">(set: $FB to 0)(set: $TB to 0)(set: $UN to 0)(set: $SF to 0)(set: $PM to 0)(set:$personality to (a: ))&lt;div class=&quot;main-background personality&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-personality.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one &quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;You are a person who&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link: &#39;&lt;div class=&quot;question__text&quot;&gt;Colors outside of the lines&lt;/div&gt;&lt;div class=&quot;question__image slide-in-left&quot;&gt;&lt;img src=&quot;images/q1-a.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $FB to it +3)(set: $UN to it + 2)(set: $TB to it + 1)(set: $SF to it +1)(set: $PM to it +1)(set: $personality to it + (a:&quot;Creative&quot;))(goto: &quot;pq2&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link: &#39;&lt;div class=&quot;question__text&quot;&gt;Colors inside of the lines&lt;/div&gt;&lt;div class=&quot;question__image slide-in-right&quot;&gt;&lt;img src=&quot;images/q1-b.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $SF to it +2)(set: $TB to it + 2)(set: $PM to it + 2)(set: $UN to it + 1)(set: $personality to it + (a:&quot;Practical&quot;))(goto: &quot;pq2&quot;)]&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;FIND YOUR PATH QUIZ&lt;/span&gt;<span class="presented-by">Presented by Pathstream <img src="images/ps-logo.png"> </span> &lt;/img&gt;&lt;/div&gt;&lt;/div&gt;&lt;script&gt;
 gtag('event', 'page_view', {
   event_category: 'quiz1',
   event_label: 'Personality Q1',
 });
 $(&#39;tw-passage&#39;).hide().fadeIn(400);
 startAnimations(1)
-
 &lt;/script&gt;</tw-passagedata><tw-passagedata pid="2" name="pq2" tags="" position="215,398" size="100,100">&lt;div class=&quot;main-background personality&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-personality.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;You are a person who enjoys&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;Having a plan&lt;/div&gt;&lt;div class=&quot;question__image slide-in-top&quot;&gt;&lt;img src=&quot;images/q3-b.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $FB to it + 2)(set: $UN to it + 1)(set: $TB to it + 1)(set: $SF to it +1)(set: $PM to it + 1)(set: $personality to it + (a:&quot;Firm&quot;))(goto: &quot;pq3&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;Going with the flow&lt;/div&gt;&lt;div class=&quot;question__image slide-in-bottom&quot;&gt;&lt;img src=&quot;images/q3-a.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $FB to it + 1)(set: $TB to it + 2)(set: $SF to it + 2)(set: $UN to it + 2)(set: $PM to it + 1)(set: $personality to it + (a:&quot;Flexible&quot;))(goto: &quot;pq3&quot;)]&lt;/div&gt;&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;FIND YOUR PATH QUIZ&lt;/span&gt;<span class="presented-by">Presented by Pathstream <img src="images/ps-logo.png"> </span> &lt;/img&gt;&lt;/div&gt;&lt;/div&gt;&lt;script&gt; 
   gtag('event', 'page_view', {
     event_category: 'quiz1',
@@ -1058,42 +1134,46 @@ $(&#39;tw-passage&#39;).hide().fadeIn(400);
     event_label: 'Interests Q1',
   });
   startAnimations(1)
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="7" name="results" tags="" position="913,642" size="100,100"><div class="main-background results"><div class="header"><div class="header__left"><span class="header__lead"></span></div><div class="try-again"><span>[[Take the Quiz Again|pq1]]</span><div class="sharing-links"><a class="facebook-share" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="24" height="24" preserveAspectRatio="xMinYMin" class="icon__icon"><path d="M8.695 6.937v1.377H7.687v1.683h1.008V15h2.072V9.997h1.39s.131-.807.194-1.69h-1.576v-1.15c0-.173.226-.404.45-.404h1.128V5h-1.535C8.644 5 8.695 6.685 8.695 6.937z"></path><path d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4zm0-2h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4z"></path></svg></a><a class="twitter-share" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="24" height="24" preserveAspectRatio="xMinYMin" class="icon__icon"><path d="M15 6.947c-.368.16-.763.27-1.178.318.424-.25.748-.646.902-1.117-.398.231-.836.4-1.304.49A2.06 2.06 0 0 0 11.923 6c-1.133 0-2.051.905-2.051 2.02 0 .158.018.312.053.46a5.854 5.854 0 0 1-4.228-2.11 1.982 1.982 0 0 0-.278 1.015c0 .7.363 1.32.913 1.681a2.076 2.076 0 0 1-.93-.253v.025a2.03 2.03 0 0 0 1.646 1.98 2.108 2.108 0 0 1-.927.034 2.049 2.049 0 0 0 1.916 1.403 4.156 4.156 0 0 1-2.548.864c-.165 0-.328-.01-.489-.028A5.863 5.863 0 0 0 8.144 14c3.774 0 5.837-3.078 5.837-5.748l-.007-.262A4.063 4.063 0 0 0 15 6.947z"></path><path d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4zm0-2h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4z"></path></svg></a><a class="linkedin-share" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="24" height="24" preserveAspectRatio="xMinYMin" class="icon__icon"><path d="M15 11.13v3.697h-2.143v-3.45c0-.866-.31-1.457-1.086-1.457-.592 0-.945.398-1.1.784-.056.138-.071.33-.071.522v3.601H8.456s.029-5.842 0-6.447H10.6v.913l-.014.021h.014v-.02c.285-.44.793-1.066 1.932-1.066 1.41 0 2.468.922 2.468 2.902zM6.213 5.271C5.48 5.271 5 5.753 5 6.385c0 .62.466 1.115 1.185 1.115h.014c.748 0 1.213-.496 1.213-1.115-.014-.632-.465-1.114-1.199-1.114zm-1.086 9.556h2.144V8.38H5.127v6.447z"></path><path d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4zm0-2h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4z"></path></svg></a></div></div></div><div class="results-container"><div class="results-description"></div><div class="additional-details"><div class="results-description__short"><div class="results-traits"><span>TRAITS</span><p></p></div><div class="results-interests"><span>INTERESTS</span><p></p></div></div><div class="results__options"><p></p></div><div class="cta"><a><svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 100"><g transform="translate(50 50) scale(0.69 -0.69) rotate(-90) translate(-50 -50)" ><svg fill="#001b58"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 10 10" enable-background="new 0 0 10 10" xml:space="preserve"><g><path stroke-width="2" stroke="#001b58" d="M1.089,3.191c0-0.162,0.131-0.295,0.293-0.295c0.078,0,0.152,0.031,0.207,0.086l3.412,3.412l3.412-3.412   C8.53,2.871,8.716,2.873,8.827,2.99c0.111,0.113,0.111,0.295,0,0.408L5.208,7.018c-0.113,0.115-0.299,0.115-0.414,0L1.175,3.398   C1.12,3.344,1.089,3.27,1.089,3.191z"></path></g></svg></g></svg></a></div></div></div><div class="footer"><span class="header__title">FIND YOUR PATH QUIZ</span><span class="presented-by">Presented by Pathstream <img src="images/ps-logo.png"> </span> </div></div>
-&lt;script&gt;
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="7" name="results" tags="" position="913,642" size="100,100"><div class="main-background results"><div class="header"><div class="header__left"><span class="header__lead"></span></div><div class="try-again"><div class="sharing-links"><a class="facebook-share" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="24" height="24" preserveAspectRatio="xMinYMin" class="icon__icon"><path d="M8.695 6.937v1.377H7.687v1.683h1.008V15h2.072V9.997h1.39s.131-.807.194-1.69h-1.576v-1.15c0-.173.226-.404.45-.404h1.128V5h-1.535C8.644 5 8.695 6.685 8.695 6.937z"></path><path d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4zm0-2h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4z"></path></svg></a><a class="twitter-share" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="24" height="24" preserveAspectRatio="xMinYMin" class="icon__icon"><path d="M15 6.947c-.368.16-.763.27-1.178.318.424-.25.748-.646.902-1.117-.398.231-.836.4-1.304.49A2.06 2.06 0 0 0 11.923 6c-1.133 0-2.051.905-2.051 2.02 0 .158.018.312.053.46a5.854 5.854 0 0 1-4.228-2.11 1.982 1.982 0 0 0-.278 1.015c0 .7.363 1.32.913 1.681a2.076 2.076 0 0 1-.93-.253v.025a2.03 2.03 0 0 0 1.646 1.98 2.108 2.108 0 0 1-.927.034 2.049 2.049 0 0 0 1.916 1.403 4.156 4.156 0 0 1-2.548.864c-.165 0-.328-.01-.489-.028A5.863 5.863 0 0 0 8.144 14c3.774 0 5.837-3.078 5.837-5.748l-.007-.262A4.063 4.063 0 0 0 15 6.947z"></path><path d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4zm0-2h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4z"></path></svg></a><a class="linkedin-share" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="24" height="24" preserveAspectRatio="xMinYMin" class="icon__icon"><path d="M15 11.13v3.697h-2.143v-3.45c0-.866-.31-1.457-1.086-1.457-.592 0-.945.398-1.1.784-.056.138-.071.33-.071.522v3.601H8.456s.029-5.842 0-6.447H10.6v.913l-.014.021h.014v-.02c.285-.44.793-1.066 1.932-1.066 1.41 0 2.468.922 2.468 2.902zM6.213 5.271C5.48 5.271 5 5.753 5 6.385c0 .62.466 1.115 1.185 1.115h.014c.748 0 1.213-.496 1.213-1.115-.014-.632-.465-1.114-1.199-1.114zm-1.086 9.556h2.144V8.38H5.127v6.447z"></path><path d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4zm0-2h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4z"></path></svg></a></div><span class="try-again__button">[[Take the quiz again|pq1]]</span></div></div><div class="results-container"><div class="results-description"><div class="general-description"></div><div class="career-opportunity"></div><span class="explainer-link"></span></div><div class="additional-details"><div class="program-details"></div><div class="results__options"></div></div></div><div class="footer"><span class="header__title">FIND YOUR PATH QUIZ</span><span class="presented-by">Presented by Pathstream <img src="images/ps-logo.png"> </span> </div></div>&lt;script&gt;
 gtag('event', 'page_view', {
   event_category: 'quiz1',
   event_label: 'Results',
 });
 var resultsObj = {
     Digital_Marketing: {
-        personality : &quot;Creative, adaptive, and a strategic thinker. You really <em>get</em> people.&quot;,
-        interests : &quot;Understanding and connecting with people, creating beautiful and engaging content. You have an eye for design and a way with words.&quot;,
-        description: "<p>Digital marketers do things like help a company manage their online advertising strategy. Create pieces of content for an Instagram campaign. Create social media content to reach new customers.  And even help manage influencer campaigns.</p><p>When you think of digital marketing, you may only think of creating ads... but there's much more that's included in this position! A digital marketer must complete the following types of work to understand their potential customers and connect with them:<ul><li>Research</li><li>Analysis</li><li>Creation</li> <li>Online Relationship Building</li></ul></p>",
-        image: "images/digital-marketing.png"
+        program_details: '<h2 class="program-title">The Facebook Digital Marketing Certificate</h2><p class="program-description">Learn how to drive business growth by launching effective campaigns using Facebook Ads, Google Analytics, A/B tests, and other tactics. Master the digital marketing skills needed by thousands of companies.</p><div class="cta"><a class="course-link" href="https://www.pathstream.com/pages/continuing_nyu_facebook?utm_source=quiz">Learn digital marketing</a></div>',
+        description: "<p>You’re a creative, yet strategic thinker who’s always focused on the long term goal.  You enjoy understanding and really connecting with people and creating beautiful and engaging content. Not only do you love telling stories, but hearing them too.</p>",
+        career_opportunity: "<h2>Career Opportunity: Digital Marketing</h2><p>Digital marketers do things like help a company manage their online advertising strategy. Create pieces of content for an Instagram campaign. Create social media content to reach new customers.  And even help manage influencer campaigns.</p><p>When you think of digital marketing, you may only think of creating content... but there's much more that's included in this position! A digital marketer must do research and analysis to understand their potential customers and connect with them.</p>",
+        image: "images/digital-marketing.png",
+        link: "https://www.pathstream.com/campaigns/find-your-path/digital-marketing"
     },
 	Data_Analytics: {
-        personality : &quot;Curious, tactical, and enjoy working independently. You're comfortable with ambiguity and the unknown.&quot;,
-        interests : &quot;Solving mysteries and identifying patterns, continual learning. You love asking questions and presenting solutions.&quot;,
-        description: "<p>Data Analytics is the process of discovering and interpreting meaning from a collection of information known as data. Data analysts manipulate, organize, and process this information in order to uncover patterns and trends that can help inform business decisions.</p><p>A data analyst's main focus is to gather information from various sources and interpret patterns and trends. A data analyst's discoveries are reported and used to drive decision making in aspects of a company's workings. Data analysts use their technical skills to:<ul><li>Clean data</li><li>Conduct analyses </li><li>Create reports</li><li>Maintain dashboards</li><li>Communicate insights</li></ul></p>",
-        image: "images/data-analytics.png"
+        program_details: '<h2 class="program-title">The Tableau Data and Business Analytics Certificate</h2><p class="program-description">Learn to perform powerful data analysis and drive business decisions using Tableau, SQL and spreadsheets. Gain analytical skills needed across a growing number of jobs and industries.</p><div class="cta"><a class="course-link" href="https://www.pathstream.com/pages/continuing_nyu_tableau?utm_source=quiz">Learn data analytics</a></div>',
+        description : "<p>You are someone who is curious, tactical, and enjoys working independently. You're comfortable with ambiguity and the unknown. You're a regular Sherlock Holmes, who loves solving mysteries and identifying patterns.</p>",
+        career_opportunity: "<h2>Career Opportunity: Data Analytics</h2><p>Data Analytics is the process of discovering and interpreting meaning from a collection of information known as data. Data analysts manipulate, organize, and process this information in order to uncover patterns and trends that can help inform business decisions.</p><p>A data analyst's main focus is to gather information from various sources and interpret patterns and trends. Data analysts use their technical skills to do things like clean data, conduct analyses, create reports, maintain dashboards and communicate insights.</p>",
+        image: "images/data-analytics.png",
+        link: "https://www.pathstream.com/campaigns/find-your-path/data-analytics"
     },
 	Salesforce_Administration: {
-        personality : &quot;Logical, strategic and solutions oriented. You like to work with a variety of people and have an eye for details.&quot;,
-        interests : &quot;Sales, solving problems and optimization. You can spot an opportunity to improve efficieny a mile a way.&quot;,
-        description: "<p>Salesforce administrators know how to configure and use Salesforce's wide array of tools and settings to meet the needs of employees at a company. Salesforce administrators are able to apply the Salesforce platform to any business, non-profit, or organization to improve functionality and efficiency.</p><p>People with Salesforce skills are needed to do things like help a nonprofit like the Red Cross track their interactions with donors, support all state insurance to streamline systems for communicating with customers, or enable a tech startup to monitor its sales pipeline of New Deal opportunities. Some responsibilities of a Salesforce administrator include: <ul><li>Managing Salesforce data</li><li>Creating custom objects and fields</li><li>Creating reports and dashboards</li><li>Documenting and designing processes</li></ul></p>",
-        image: "images/salesforce.png"
+        program_details: '<h2 class="program-title">The Salesforce Administrator Career Certificate</h2><p class="program-description">Learn to build dashboards, generate reports, and improve business processes so you stand out for sales, business development, and customer success roles. Gain the customer relationship management (CRM) skills needed for thousands of Salesforce admin jobs.</p><div class="cta"><a class="course-link" href="https://www.pathstream.com/pages/continuing_nyu_salesforce?utm_source=quiz">Learn Salesforce</a></div>',
+        description: "<p>You've been described as logical, strategic and solutions oriented. You like to work with a variety of people and have an eye for the details. You might be interested in business, finance or sales and are always  ready to jump at an opportunity to improve efficiency.</p>",
+        career_opportunity: "<h2>Career Opportunity: Salesforce Administration</h2><p>Salesforce administrators know how to configure and use Salesforce's wide array of tools and settings to meet the needs of employees at a company. Salesforce administrators are able to apply the Salesforce platform to any business, non-profit, or organization to improve functionality and efficiency.</p><p>People with Salesforce skills are needed to do things like help a nonprofit like the Red Cross track their interactions with donors, or enable a tech startup to monitor its sales pipeline of New Deal opportunities.</p>",
+        image: "images/salesforce.png",
+        link: "https://www.pathstream.com/campaigns/find-your-path/salesforce-administration"
     },
 	Immersive_Design: {
-        personality : &quot;Creative, adaptable and dedicated to the details. You're the type of person who gets things done.&quot;,
-        interests : &quot;Technology, design and solving complex problems. You love getting lost in the details and bringing things to life.&quot;,
-        description: "<p>An immersive designer sits at the heart of an Extended Reality development team: while a 3D artist might make custom assets, and a developer constructs scripts to add custom functionality, an immersive designer brings it all together in a scene.</p> <p>Using 3D assets, they construct the environments or customize the experience. They are responsible for arranging 3D objects, configuring interactions, designing the UI, and implementing scripts, whether they write them themselves or not.</p>",
-        image: "images/unity.png"
+        program_details: '<h2 class="program-title">The Unity Immersive Design Certificate</h2><p class="program-description">Master real-time 3D development skills needed by innovative companies around the world. Develop AR/VR applications and virtual environments in Unity to become a standout applicant in a growing field.</p><div class="cta"><a class="course-link" href="https://www.pathstream.com/pages/continuing_nyu_unity?utm_source=quiz">Learn immersive design</a></div>',
+        description: "<p>You're creative, adaptable and dedicated to the details. You consider yourself the type of person who gets things done. You're interested in both technology and design and using them to solving complex problems.</p>",
+        career_opportunity: "<h2>Career Opportunity: Immersive Design</h2><p>An immersive designer sits at the heart of an Extended Reality development team: while a 3D artist might make custom assets, and a developer constructs scripts to add custom functionality, an immersive designer brings it all together in a scene.</p> <p>Using 3D assets, they construct the environments or customize the experience. They are responsible for arranging 3D objects, configuring interactions, designing the UI, and implementing scripts, whether they write them themselves or not.</p>",
+        image: "images/unity.png",
+        link: "https://www.pathstream.com/campaigns/find-your-path/immersive-design"
     },
 	Project_Management: {
-        personality : &quot;Organized, cooperative and always taking initiative.&quot;,
-        interests : &quot;Planning events, organizing teams and achieving a goal.&quot;,
-        description: "<p>A project manager works at the intersection of planning, communication, and management to make sure a team is working as a unit and moving towards the same goal. Project managers  keep track of what you want to achieve, how you will achieve it, and how long it’ll take to achieve it.</p><p>Project managers are responsible for ensuring the successful delivery and completion of a project. This means they guide the project through its initiation, planning, executing, and closing the project. Their primary focus is to use knowledge, tools, and techniques to lead a team in achieving project goals and mitigating project risks within a set timeline and budget.</p>",
-        image: "images/project-manage.png"
+        program_details: '<h2 class="program-title">The Asana Project Management Certificate</h2><p class="program-description">Learn to manage complex projects and drive key business results. Prepare for the Certified Associate in Project Management (CAPM)® Exam and become a competitive applicant for thousands of project management jobs.</p><div class="cta"><a class="course-link" href="https://www.pathstream.com/pages/continuing_nyu_asana?utm_source=quiz">Learn immersive design</a></div>',
+        description: "<p>You're organized and cooperative. You're always ready to jump in and take the lead! You love planning events and trips, organizing teams and working towards a common goal.</p>",
+        career_opportunity: "<h2>Career Opportunity: Project Management</h2><p>A project manager works at the intersection of planning, communication, and management to make sure a team is working as a unit and moving towards the same goal.</p><p>Project managers are responsible for ensuring the successful delivery and completion of a project. This means they guide the project through its initiation, planning, executing, and closing the project. Their primary focus is to use knowledge, tools, and techniques to lead a team in achieving project goals and mitigating project risks within a set timeline and budget.</p>",
+        image: "images/project-manage.png",
+        link: "https://www.pathstream.com/campaigns/find-your-path/project-management"
     } 
 }
 
@@ -1121,17 +1201,21 @@ var arrayOfObj = arrayLabel.map(function(d, i) {
 $(&#39;.header__lead&#39;).html(`Your recommended path is <span>${newArrayLabel[0]}.</span>`)
 
 var formattedName = newArrayLabel[0].replace(&#39; &#39;, &#39;_&#39;)
-$(&quot;.results-traits p&quot;).text(resultsObj[formattedName][&#39;personality&#39;])
-$(&quot;.results-interests p&quot;).text(resultsObj[formattedName][&#39;interests&#39;])
-$(&quot;.description-text&quot;).text(resultsObj[formattedName][&#39;description&#39;])
-$('.results__options').html(`<p>You also scored high for careers in <a>${newArrayLabel[1]}</a> and <a>${newArrayLabel[2]}</a>.</p>`)
+var secondOption = newArrayLabel[1].replace(&#39; &#39;, &#39;_&#39;)
+var thirdOption = newArrayLabel[2].replace(&#39; &#39;, &#39;_&#39;)
+$('.results__options').html(`<p>You also scored high for careers in <a target=\"_blank\" href=${resultsObj[secondOption].link}>${newArrayLabel[1].toLowerCase()}</a> and <a target=\"_blank\" href=${resultsObj[thirdOption].link}>${newArrayLabel[2].toLowerCase()}</a>.</p>`)
 
 $('.header__left').prepend('<img class="result-icon"></img>')
 $('.result-icon').attr('src', resultsObj[formattedName]["image"])
-$('.results-description').html(resultsObj[formattedName]["description"])
-var linkText = &quot;Explore a career in &quot; + newArrayLabel[0].toLowerCase()
-var linkA = $(&#39;.cta a&#39;)
-$(linkA).prepend(linkText)
+$('.general-description').html(resultsObj[formattedName]["description"])
+$('.career-opportunity').html(resultsObj[formattedName]["career_opportunity"])
+$('.program-details').html(resultsObj[formattedName]["program_details"])
+var explainerPageLink = resultsObj[formattedName]["link"]
+$('.explainer-link').html(`<a href=${explainerPageLink}>Explore a career in ${newArrayLabel[0].toLowerCase()}<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M1 1L9 9L0.999999 17" stroke="#04A9FB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  </a>`) 
+
 $('.facebook-share').on('click', () => handleFacebookClick(newArrayLabel[0]))
 setTimeout(() => setLinks(newArrayLabel[0]), 5000)
 
@@ -1165,8 +1249,7 @@ data: sendData
     event_label: 'Personality Q7',
   });
     startAnimations(1)
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="10" name="pq8" tags="" position="914,405" size="100,100">&lt;div class=&quot;main-background personality&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-personality.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one rotate&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two rotate&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three rotate&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;You are a person who tends to&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;Eliminate problems before they appear&lt;/div&gt;&lt;div class=&quot;question__image slide-in-top&quot;&gt;&lt;img src=&quot;images/pq8-a.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $FB to it + 2)(set: $TB to it + 1)(set: $SF to it + 2)(set: $UN to it + 1)(set: $PM to it + 3)(set: $personality to it + (a:&quot;Active&quot;))(goto: &quot;iq1&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link: &#39;&lt;div class=&quot;question__text&quot;&gt;Respond to problems as they happen&lt;/div&gt;&lt;div class=&quot;question__image slide-in-bottom&quot;&gt;&lt;img src=&quot;images/pq8-b.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $FB to it + 1)(set: $TB to it + 2)(set: $SF to it + 1)(set: $UN to it + 2)(set: $personality to it + (a:&quot;Reactive&quot;))(goto: &quot;iq1&quot;)]&lt;/div&gt;&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;FIND YOUR PATH QUIZ&lt;/span&gt;<span class="presented-by">Presented by Pathstream <img src="images/ps-logo.png"> </span> &lt;/img&gt;&lt;/div&gt;&lt;/div&gt;
-    &lt;script&gt;
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="10" name="pq8" tags="" position="914,405" size="100,100">&lt;div class=&quot;main-background personality&quot;&gt;&lt;div class=&quot;header&quot;&gt;&lt;div class=&quot;header__progress&quot;&gt;&lt;img src=&quot;images/progress-personality.png&quot;&gt;&lt;div class=&quot;labels&quot;&gt;&lt;span class=&quot;progress__label one rotate&quot;&gt;Personality&lt;/span&gt;&lt;span class=&quot;progress__label two rotate&quot;&gt;Interests&lt;/span&gt;&lt;span class=&quot;progress__label three rotate&quot;&gt;Skills&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;questions&quot;&gt;&lt;span class=&quot;framing-question&quot;&gt;You are a person who tends to&lt;/span&gt;&lt;div class=&quot;question this&quot;&gt;(link:&#39;&lt;div class=&quot;question__text&quot;&gt;Eliminate problems before they appear&lt;/div&gt;&lt;div class=&quot;question__image slide-in-top&quot;&gt;&lt;img src=&quot;images/pq8-a.png&quot;&gt;&lt;/div&gt;&#39;)[(set: $FB to it + 2)(set: $TB to it + 1)(set: $SF to it + 2)(set: $UN to it + 1)(set: $PM to it + 3)(set: $personality to it + (a:&quot;Active&quot;))(goto: &quot;iq1&quot;)]&lt;/div&gt;&lt;div class=&quot;question that&quot;&gt;(link: &#39;&lt;div class=&quot;question__text&quot;&gt;Respond to problems as they happen&lt;/div&gt;&lt;div class=&quot;question__image slide-in-bottom&quot;&gt;&lt;img src=&quot;images/pq8-b.png&quot;&gt;&lt;/img&gt;&lt;/div&gt;&#39;)[(set: $FB to it + 1)(set: $TB to it + 2)(set: $SF to it + 1)(set: $UN to it + 2)(set: $personality to it + (a:&quot;Reactive&quot;))(goto: &quot;iq1&quot;)]&lt;/div&gt;&lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;FIND YOUR PATH QUIZ&lt;/span&gt;<span class="presented-by">Presented by Pathstream <img src="images/ps-logo.png"> </span> &lt;/img&gt;&lt;/div&gt;&lt;/div&gt;&lt;script&gt;
     gtag('event', 'page_view', {
       event_category: 'quiz1',
       event_label: 'Personality Q8',
@@ -1241,7 +1324,7 @@ startAnimations(2)
   &lt;tr&gt;
     &lt;td&gt;(link:&quot;You want to learn code to build apps and games.&quot;)[(set: $UN to it + 2)(set: $TB to it + 1)(goto: &quot;sq3&quot;)]&lt;/td&gt;
     &lt;td&gt;(link: &quot;You want to learn code to analyze data.&quot;)[(set: $TB to it + 2)(goto: &quot;sq3&quot;)]&lt;/td&gt;
-    &lt;td&gt;(link: &quot;You aren&#39;t sure right now, but might be interested at some point.&quot;)[(set: $TB to it + 1)(goto: &quot;sq3&quot;)]&lt;/td&gt;
+    &lt;td&gt;(link: &quot;You aren&#39;t sure right now, but might be interested at some point.&quot;)[(set: $TB to it + 1)(set: $SF to it + 1)(goto: &quot;sq3&quot;)]&lt;/td&gt;
     &lt;td&gt;(link: &quot;You&#39;re not really interested in learning to code.&quot;)[(set: $UN to it - 2)(set: $TB to it - 1)(set: $SF to it + 1)(set: $PM to it + 1)(set: $FB to it + 1)(goto: &quot;sq3&quot;)]&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -1275,12 +1358,12 @@ startAnimations(2)</script></tw-passagedata>
   &lt;tr&gt;
     &lt;td&gt;(link:&quot;Build a detailed to-do list for the day and prioritize each task.&quot;)[(set: $PM to it + 2)(set: $SF to it + 1)(goto: &quot;sq5&quot;)]&lt;/td&gt;
     &lt;td&gt;(link: &quot;Follow a system to keep your file structure organized.&quot;)[(set: $UN to it + 1)(set: $TB to it + 1)(goto: &quot;sq5&quot;)]&lt;/td&gt;
-    &lt;td&gt;(link: &quot;Maintain lots of documentation.&quot;)[(set: $TB to it + 1)(set: $SF to it + 1)(set: $UN to it + 1)(goto: &quot;sq5&quot;)]&lt;/td&gt;
+    &lt;td&gt;(link: &quot;Maintain lots of documentation.&quot;)[(set: $TB to it + 1)(set: $SF to it + 1)(goto: &quot;sq5&quot;)]&lt;/td&gt;
     &lt;td&gt;(link: &quot;Keep a high level calendar of all your upcoming priorities.&quot;)[(set: $FB to it + 1)(set: $PM to it + 1)(goto: &quot;sq5&quot;)]&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;FIND YOUR PATH QUIZ&lt;/span&gt;&lt;img src=&quot;images/ps-logo.png&quot;&lt;/div&gt;&lt;/div&gt;<script>
+&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;footer&quot;&gt;&lt;span class=&quot;header__title&quot;&gt;FIND YOUR PATH QUIZ&lt;/span&gt;<span class="presented-by">Presented by Pathstream <img src="images/ps-logo.png"> </span>&lt;/div&gt;&lt;/div&gt;<script>
  gtag('event', 'page_view', {
     event_category: 'quiz1',
     event_label: 'Skills Q4',
@@ -1292,7 +1375,7 @@ startAnimations(2)</script></tw-passagedata><tw-passagedata pid="21" name="sq5" 
     &lt;td&gt;(link:&quot;A newsletter or lengthy e-mail. You have a way with words!&quot;)[(set: $FB to it + 2)(goto: &quot;sq6&quot;)]&lt;/td&gt;
     &lt;td&gt;(link: &quot;A presentation or slide deck. The bigger the audience the better!&quot;)[(set: $FB to it + 1)(set: $TB to it + 1)(goto: &quot;sq6&quot;)]&lt;/td&gt;
     &lt;td&gt;(link: &quot;Short e-mails or instant messages. You like to be succinct.&quot;)[(set: $TB to it + 1)(set: $PM to it + 1)(set: $SF to it + 1)(set: $UN to it + 1)(goto: &quot;sq6&quot;)]&lt;/td&gt;
-    &lt;td&gt;(link: &quot;In person meetings. Usually a recurring check-in.&quot;)[(set: $PM to it + 1)(set: $SF to it + 1)(goto: &quot;sq6&quot;)]&lt;/td&gt;
+    &lt;td&gt;(link: &quot;In person meetings, like a recurring check-in with your team.&quot;)[(set: $PM to it + 1)(set: $SF to it + 1)(goto: &quot;sq6&quot;)]&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
