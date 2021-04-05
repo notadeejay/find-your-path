@@ -11,7 +11,7 @@ function setLinks (result) {
 function handleFacebookClick (result) {
     FB.ui({
         method: 'share',
-        href: 'http://www.pathstream.com',
+        href: 'https://find-your-path.netlify.app/',
         quote: `I got ${result} - how cool!`
     }, function(response){
         if (response) {
